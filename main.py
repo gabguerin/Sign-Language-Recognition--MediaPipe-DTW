@@ -8,16 +8,17 @@ import numpy as np
 
 
 if __name__ == '__main__':
-    dload = True # Either load or generate dataset
+    dload = False # Either load or generate dataset
     mload = False # Either load or generate model
 
     videos = ["Bienvenue - LSF.mp4",
-              "Non - LSF.mp4"]
+              "Non - LSF.mp4",
+              "Oui - LSF.mp4"]
 
     nb_actions = 30
     seq_len = 40
-    # Left hand keypoints * 3 coordinates + Right hand ... + Pose ...
-    nb_keypoints = 21 * 3 + 21 * 3 + 9 * 3
+    # ( Left hand keypoints + Right hand kp + Pose kp ) * 3 coordinates x, y, z
+    nb_keypoints = (21 + 21 + 9) * 3
 
     X, y = load_dataset(videos) if dload \
         else generate_dataset(videos, nb_actions, seq_len)
@@ -26,9 +27,9 @@ if __name__ == '__main__':
     # Input shape = (seq_len, nb_keypoints * nb_actions
     model = Seq2seqClassifier(input_shape=(seq_len, nb_keypoints), num_classes=len(videos))
     if mload:
-        model.load("")
+        model.load('')
     else:
-        model.train(X_train, y_train)
+        model.train(X_train, y_train, epochs=1000)
 
     # Sequence of landmarks
     sequence = []

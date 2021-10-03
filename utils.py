@@ -44,7 +44,7 @@ def extract_keypoints(results):
 
 
 def save_array(arr, path):
-    file = open(path + ".pickle", "wb")
+    file = open(path, "wb")
     pkl.dump(arr, file)
     file.close()
 
