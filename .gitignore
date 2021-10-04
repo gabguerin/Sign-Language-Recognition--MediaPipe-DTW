@@ -1,0 +1,8 @@
+__pycache__
+.idea
+
+landmarks/*
+!landmarks/.gitkeep
+
+Videos/*
+!Videos/.gitkeep
