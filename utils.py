@@ -31,17 +31,6 @@ def draw_landmarks(image, results):
                              mp_drawing.DrawingSpec(color=(52, 55, 201), thickness=2, circle_radius=2)
                              )
 
-def flatten_landmarks(landmark_list, s, e):
-    if landmark_list:
-         return np.array([[res.x, res.y, res.z] for res in landmark_list.landmark[s:e]]).flatten()
-    return np.zeros((e - s - 1) * 3) # Return zero matrix if the landmark doesn't exist
-
-def extract_keypoints(results):
-    pose = flatten_landmarks(results.pose_landmarks, 9, 18)
-    lh = flatten_landmarks(results.pose_landmarks, 0, 21)
-    rh = flatten_landmarks(results.pose_landmarks, 0, 21)
-    return np.concatenate([pose, lh, rh])
-
 
 def save_array(arr, path):
     file = open(path, "wb")
@@ -52,4 +41,4 @@ def load_array(path):
     file = open(path, "rb")
     arr = pkl.load(file)
     file.close()
-    return arr
+    return np.array(arr)
