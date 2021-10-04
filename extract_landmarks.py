@@ -40,5 +40,3 @@ def extract_landmarks(video, save=True):
             else:
                 break
         cap.release()
-
-    return keypoint_list

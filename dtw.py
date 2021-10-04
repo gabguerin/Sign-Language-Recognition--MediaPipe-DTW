@@ -15,7 +15,7 @@ def dtw_distances(action, signs):
 
 def dtw_between_actions(action1, action2, seq_len):
     dist_ = []
-    nb_keypoints = len(action1[0])
+    nb_keypoints = action1.shape[1]
     for i in range(nb_keypoints):
-        dist_.append(fastdtw(action1[i][:], action2[i][:], radius=seq_len)[0])
+        dist_.append(fastdtw(action1[:,i], action2[:,i], radius=seq_len)[0])
     return np.mean(dist_)

@@ -41,4 +41,4 @@ def load_array(path):
     file = open(path, "rb")
     arr = pkl.load(file)
     file.close()
-    return arr
+    return np.array(arr)

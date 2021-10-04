@@ -57,6 +57,7 @@ if __name__ == '__main__':
                 color = red_color
 
             elif recording and len(sequence) == seq_len:
+                sequence = np.array(sequence)
                 res = dtw_distances(sequence, signs)
 
                 print(res)
@@ -72,11 +73,11 @@ if __name__ == '__main__':
             cv2.imshow('OpenCV Feed', image)
 
             # Break pressing q
-            if not recording & cv2.waitKey(5) & 0xFF == ord('q'):
+            if cv2.waitKey(5) & 0xFF == ord('q'):
                 break
 
             # Record pressing s
-            if not recording & cv2.waitKey(5) & 0xFF == ord('s'):
+            if cv2.waitKey(5) & 0xFF == ord('s'):
                 recording = True
 
         cap.release()
