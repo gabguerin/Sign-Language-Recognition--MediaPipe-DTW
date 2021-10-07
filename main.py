@@ -9,17 +9,17 @@ from dtw import dtw_distances
 
 if __name__ == '__main__':
 
-    videos = os.listdir("Videos")
+    videos = ["Oui - LSF.mp4",
+              "Non - LSF.mp4",
+              "A droite - LSF.mp4"]
+    #os.listdir("Videos")
     landmarks = os.listdir("landmarks")
     for video in videos:
         if video[:-4]+'.pickle' not in landmarks:
             extract_landmarks(video)
 
     signs = []
-    landmarks = ["Oui - LSF.pickle",
-                 "Non - LSF.pickle",
-                 "A droite - LSF.pickle"]
-    #os.listdir("landmarks")
+    landmarks = os.listdir("landmarks")
     for landmark in landmarks:
         path = os.path.join("landmarks",landmark)
         signs.append(utils.load_array(path))
