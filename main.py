@@ -5,26 +5,33 @@ import numpy as np
 import os
 from extract_landmarks import extract_landmarks, extract_keypoints
 from dtw import dtw_distances
+import pandas as pd
 
 
 if __name__ == '__main__':
 
-    videos = ["Oui - LSF.mp4",
-              "Non - LSF.mp4",
-              "A droite - LSF.mp4"]
-    #os.listdir("Videos")
-    landmarks = os.listdir("landmarks")
+    videos = os.listdir("Videos")[1:]
+    landmarks = os.listdir("landmarks")[1:]
     for video in videos:
         if video[:-4]+'.pickle' not in landmarks:
             extract_landmarks(video)
 
     signs = []
-    landmarks = os.listdir("landmarks")
+    landmarks = os.listdir("landmarks")[1:]
     for landmark in landmarks:
         path = os.path.join("landmarks",landmark)
         signs.append(utils.load_array(path))
 
 
+    action = utils.load_array("oui_val.pickle")
+
+    distances = dtw_distances(action, signs)
+
+    df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
+    df.to_csv("distances_from_oui.csv")
+
+
+"""
 
     # Sequence of landmarks
     sequence = []
@@ -82,3 +89,5 @@ if __name__ == '__main__':
 
         cap.release()
         cv2.destroyAllWindows()
+        
+"""

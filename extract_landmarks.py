@@ -7,16 +7,19 @@ from utils import mediapipe_detection, save_array
 
 def flatten_landmarks(landmark_list, s, e):
     if landmark_list:
-         return np.array([[res.x, res.y, res.z] for res in landmark_list.landmark[s:e]]).flatten()
-    return np.zeros((e - s - 1) * 3) # Return zero matrix if the landmark doesn't exist
+        l = []
+        for landmark in landmark_list.landmark[s:e]:
+            l += [landmark.x, landmark.y, landmark.z]
+        return l
+    return [np.nan for i in range((e - s) * 3)] # Return zero matrix if the landmark doesn't exist
 
 def extract_keypoints(results):
     standardize_results(results)
 
-    pose = flatten_landmarks(results.pose_landmarks, 9, 18)
+    #pose = flatten_landmarks(results.pose_landmarks, 9, 18)
     lh = flatten_landmarks(results.left_hand_landmarks, 0, 21)
     rh = flatten_landmarks(results.right_hand_landmarks, 0, 21)
-    return np.concatenate([pose, lh, rh])
+    return lh + rh
 
 
 def standardize_results(results):
@@ -49,11 +52,13 @@ def extract_landmarks(video, save=True):
                 # Store results
                 keypoint_list.append(extract_keypoints(results))
 
-                if save:
-                    # Saving landmarks
-                    fname = video.split('.')[0] if '.' in video else video
-                    path = os.path.join("landmarks", fname+".pickle")
-                    save_array(keypoint_list, path)
             else:
                 break
         cap.release()
+
+
+    if save:
+        # Saving landmarks
+        fname = video.split('.')[0] if '.' in video else video
+        path = os.path.join("landmarks", fname + ".pickle")
+        save_array(np.nan_to_num(keypoint_list), path)
