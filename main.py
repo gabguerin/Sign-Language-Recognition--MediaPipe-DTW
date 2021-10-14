@@ -10,26 +10,27 @@ import pandas as pd
 
 if __name__ == '__main__':
 
-    videos = os.listdir("Videos")[1:]
-    landmarks = os.listdir("landmarks")[1:]
+    videos = os.listdir("Videos")[1:][-10:]
+    landmarks = os.listdir("landmarks")
     for video in videos:
         if video[:-4]+'.pickle' not in landmarks:
             extract_landmarks(video)
 
     signs = []
-    landmarks = os.listdir("landmarks")[1:]
+    landmarks = os.listdir("landmarks")[-10:]
     for landmark in landmarks:
         path = os.path.join("landmarks",landmark)
         signs.append(utils.load_array(path))
 
 
-    action = utils.load_array("oui_val.pickle")
+    path = os.path.join("landmarks","oui_val.pickle")
+    action = utils.load_array(path)
 
     distances = dtw_distances(action, signs)
 
     df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
     df.to_csv("distances_from_oui.csv")
-
+    print(df)
 
 """
 
