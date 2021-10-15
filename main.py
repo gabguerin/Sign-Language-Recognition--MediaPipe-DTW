@@ -22,21 +22,21 @@ if __name__ == '__main__':
         path = os.path.join("landmarks",landmark)
         signs.append(utils.load_array(path))
 
-
+    #"""
     path = os.path.join("landmarks","oui_val.pickle")
     action = utils.load_array(path)
 
     distances = dtw_distances(action, signs)
 
     df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
-    df.to_csv("distances_from_oui.csv")
     print(df)
 
-"""
+    """
 
     # Sequence of landmarks
-    sequence = []
-    seq_len = 40
+    lh_list, rh_list = [], []
+    seq_len = 50
+    count = 0
     recording = False
 
     blue_color = (245, 25, 16)
@@ -56,22 +56,27 @@ if __name__ == '__main__':
             # Draw landmarks
             utils.draw_landmarks(image, results)
 
-            if recording and len(sequence) < seq_len:
-                # Record keypoints
-                keypoints = extract_keypoints(results)
-                sequence.append(keypoints)
+            if recording and count < seq_len:
+                # Store results
+                lh, rh = extract_keypoints(results)
+                lh_list.append(lh)
+                rh_list.append(rh)
+
+                count +=1
 
                 # Red circle while recording
                 color = red_color
 
-            elif recording and len(sequence) == seq_len:
-                sequence = np.array(sequence)
-                res = dtw_distances(sequence, signs)
+            elif recording and count == seq_len:
+                action = np.array([lh_list, rh_list])
+                distances = dtw_distances(action, signs)
 
-                print(res)
+                df = pd.DataFrame({"signs": landmarks, "distances": distances}).sort_values(by=["distances"])
+                df.to_csv("distances_from_oui.csv")
+                print(df)
 
                 recording = False
-                sequence = []
+                action = []
                 color = blue_color
 
             # REC circle
@@ -90,5 +95,5 @@ if __name__ == '__main__':
 
         cap.release()
         cv2.destroyAllWindows()
-        
-"""
+
+        #"""
