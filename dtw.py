@@ -30,18 +30,18 @@ def dtw_distances(action, signs):
             if np.sum(action_lh) > 0:
                 dist += fastdtw(action_lh, sign_lh)[0]
             else:
-                dist += 1000
+                dist += 10000
         else:
             if np.sum(action_lh) > 0:
-                dist += 1000
+                dist += 10000
         if np.sum(sign_rh) > 0:
             if np.sum(action_rh) > 0:
                 dist += fastdtw(action_rh, sign_rh)[0]
             else:
-                dist += 1000
+                dist += 10000
         else:
             if np.sum(action_rh) > 0:
-                dist += 1000
+                dist += 10000
 
         arr.append(dist)
     return arr

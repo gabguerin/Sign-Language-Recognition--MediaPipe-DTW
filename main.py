@@ -10,26 +10,37 @@ import pandas as pd
 
 if __name__ == '__main__':
 
-    videos = os.listdir("Videos")[1:][-10:]
+    videos = os.listdir("Videos")[1:]
     landmarks = os.listdir("landmarks")
     for video in videos:
-        if video[:-4]+'.pickle' not in landmarks:
+        if video[:-4]+'.pickle' not in landmarks\
+                and video[-4:] in ['.mp4', '.mov']:
             extract_landmarks(video)
 
     signs = []
-    landmarks = os.listdir("landmarks")[-10:]
+    landmarks = ["Oui - LSF.pickle",
+                 "Ca va - LSF.pickle",
+                 "Bonjour - LSF.pickle",
+                 "S il vous plait - LSF.pickle"]
     for landmark in landmarks:
         path = os.path.join("landmarks",landmark)
         signs.append(utils.load_array(path))
 
     #"""
-    path = os.path.join("landmarks","oui_val.pickle")
-    action = utils.load_array(path)
+    landmarks = ["Bonjour_val.pickle",
+                 "Ca_va_val.pickle",
+                 "Oui_val.pickle",
+                 "silvousplait_val.pickle"]
+    for landmark in landmarks:
+        path = os.path.join("landmarks",landmark)
+        action = utils.load_array(path)
 
-    distances = dtw_distances(action, signs)
+        distances = dtw_distances(action, signs)
 
-    df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
-    print(df)
+        df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
+
+        print(landmark)
+        print(df)
 
     """
 
