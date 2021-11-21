@@ -13,7 +13,7 @@ def landmark_to_array(landmark_list):
     return np.nan_to_num(keypoints)
 
 
-def extract_keypoints(results):
+def extract_frame_landmarks(results):
     """
     Transform results in a list of standardized keypoints to be able to compute dtw distances
     :param results: mediapipe object that contains the 3D position of all keypoints
@@ -28,7 +28,7 @@ def extract_keypoints(results):
         lh = landmark_to_array(results.left_hand_landmarks)
 
         lh = translate_keypoints(lh, 4, [0, 0, 0])
-        lh = fix_keypoints(lh, lh[5] - lh[0])
+        lh = fix_keypoints(lh, lh[4] - lh[0])
         lh = translate_keypoints(lh, 4, [0, 0, 0])
 
         lh = lh.reshape(63).tolist()
@@ -45,13 +45,13 @@ def extract_keypoints(results):
     return lh, rh
 
 
-def extract_landmarks(video, save=True):
+def extract_video_landmarks(video, save=True):
     lh_list = []
     rh_list = []
 
     cap = cv2.VideoCapture(os.path.join("Videos",video))
     # Set mediapipe model
-    with mp.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+    with mp.solutions.holistic.Holistic(min_detection_confidence=0.25, min_tracking_confidence=0.25) as holistic:
         while cap.isOpened():
             ret, frame = cap.read()
             if ret:
@@ -59,7 +59,7 @@ def extract_landmarks(video, save=True):
                 image, results = mediapipe_detection(frame, holistic)
 
                 # Store results
-                lh, rh = extract_keypoints(results)
+                lh, rh = extract_frame_landmarks(results)
                 lh_list.append(lh)
                 rh_list.append(rh)
             else:

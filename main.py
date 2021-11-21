@@ -3,19 +3,19 @@ import mediapipe
 import utils
 import numpy as np
 import os
-from extract_landmarks import extract_landmarks, extract_keypoints
+from extract_landmarks import extract_video_landmarks, extract_frame_landmarks
 from dtw import dtw_distances
 import pandas as pd
 
 
 if __name__ == '__main__':
 
-    videos = os.listdir("Videos")[1:]
+    videos = os.listdir("Videos")[2:]
     landmarks = os.listdir("landmarks")
     for video in videos:
         if video[:-4]+'.pickle' not in landmarks\
                 and video[-4:] in ['.mp4', '.mov']:
-            extract_landmarks(video)
+            extract_video_landmarks(video)
 
     signs = []
 
@@ -70,10 +70,8 @@ if __name__ == '__main__':
             utils.draw_landmarks(video_panel, results)
 
             if recording and count < seq_len:
-                results_df = pd.DataFrame({"signs": [], "distances": []})
-
                 # Store results
-                lh, rh = extract_keypoints(results)
+                lh, rh = extract_frame_landmarks(results)
                 lh_list.append(lh)
                 rh_list.append(rh)
 
