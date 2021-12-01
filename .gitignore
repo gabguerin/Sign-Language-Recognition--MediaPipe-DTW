@@ -1,8 +1,8 @@
 __pycache__
 .idea
 
-landmarks/*
-!landmarks/.gitkeep
+data/dataset/*
+!data/dataset/.gitkeep
 
-Videos/*
-!Videos/.gitkeep
+data/videos/*
+!data/videos/.gitkeep

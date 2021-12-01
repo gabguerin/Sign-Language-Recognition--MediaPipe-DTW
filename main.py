@@ -1,50 +1,35 @@
 import cv2
 import mediapipe
 import utils
-import numpy as np
 import os
-from extract_landmarks import extract_landmarks, extract_keypoints
-from dtw import dtw_distances
-import pandas as pd
 
+from models.sign_model import SignModel
+from utils.landmark_utils import save_landmarks_from_video, load_array
+from webcam_manager import WebcamManager
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    videos = os.listdir("Videos")[1:][-10:]
-    landmarks = os.listdir("landmarks")
-    for video in videos:
-        if video[:-4]+'.pickle' not in landmarks:
-            extract_landmarks(video)
+    videos = [name.replace(".mp4", "") for name in os.listdir("data/videos") if name.endswith(".mp4")]
+    dataset = [name for name in os.listdir("data/dataset") if not name.startswith(".")]
 
-    signs = []
-    landmarks = os.listdir("landmarks")[-10:]
-    for landmark in landmarks:
-        path = os.path.join("landmarks",landmark)
-        signs.append(utils.load_array(path))
+    videos_not_in_dataset = list(set(videos).difference(set(dataset)))
+    for video in videos_not_in_dataset:
+        save_landmarks_from_video(video + ".mp4")
 
+    # Create a dictionary of reference signs
+    sign_dictionary = {}
+    for sign_name in dataset:
+        path = os.path.join("data/dataset", sign_name)
 
-    path = os.path.join("landmarks","oui_val.pickle")
-    action = utils.load_array(path)
+        left_hand_landmarks = load_array(os.path.join(path, f"lh_{sign_name}.pickle"))
+        right_hand_landmarks = load_array(os.path.join(path, f"rh_{sign_name}.pickle"))
 
-    distances = dtw_distances(action, signs)
+        sign_dictionary[sign_name] = SignModel(left_hand_landmarks, right_hand_landmarks)
 
-    df = pd.DataFrame({"signs":landmarks, "distances":distances}).sort_values(by=["distances"])
-    df.to_csv("distances_from_oui.csv")
-    print(df)
-
-"""
-
-    # Sequence of landmarks
-    sequence = []
-    seq_len = 40
-    recording = False
-
-    blue_color = (245, 25, 16)
-    red_color = (24, 44, 245)
-    color = blue_color
+    webcam_manager = WebcamManager(sign_dictionary)
 
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-    with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.2, min_tracking_confidence=0.2) as holistic:
+    with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
         while cap.isOpened():
 
             # Read feed
@@ -53,32 +38,8 @@ if __name__ == '__main__':
             # Make detections
             image, results = utils.mediapipe_detection(frame, holistic)
 
-            # Draw landmarks
-            utils.draw_landmarks(image, results)
-
-            if recording and len(sequence) < seq_len:
-                # Record keypoints
-                keypoints = extract_keypoints(results)
-                sequence.append(keypoints)
-
-                # Red circle while recording
-                color = red_color
-
-            elif recording and len(sequence) == seq_len:
-                sequence = np.array(sequence)
-                res = dtw_distances(sequence, signs)
-
-                print(res)
-
-                recording = False
-                sequence = []
-                color = blue_color
-
-            # REC circle
-            cv2.circle(image, (30, 30), 20, color, -1)
-
-            # Show to screen
-            cv2.imshow('OpenCV Feed', image)
+            # Update frame and process results
+            webcam_manager.update(frame, results)
 
             # Break pressing q
             if cv2.waitKey(5) & 0xFF == ord('q'):
@@ -86,9 +47,7 @@ if __name__ == '__main__':
 
             # Record pressing s
             if cv2.waitKey(5) & 0xFF == ord('s'):
-                recording = True
+                webcam_manager.record()
 
         cap.release()
         cv2.destroyAllWindows()
-        
-"""
