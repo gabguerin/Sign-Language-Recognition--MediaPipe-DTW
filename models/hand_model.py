@@ -33,12 +33,12 @@ class HandModel(object):
         ]
 
         # Normalize dataset
-        self.landmarks = self.normalize_landmarks(landmarks)
+        self.landmarks = self._normalize_landmarks(landmarks)
 
         # Compute embeddings
-        self.embedding = self.get_distance_embedding(self.landmarks)
+        self.embedding = self._get_distance_embedding(self.landmarks)
 
-    def normalize_landmarks(self, landmarks):
+    def _normalize_landmarks(self, landmarks):
         """
         Normalizes dataset translation and scale
         """
@@ -47,18 +47,19 @@ class HandModel(object):
         landmarks -= wrist_
 
         # Divide positions by the distance between the wrist & the middle finger
-        palm_size = self.get_distance_by_names(landmarks, "wrist", "middle_0")
+        palm_size = self._get_distance_by_names(landmarks, "wrist", "middle_0")
         landmarks /= palm_size
 
         return landmarks
 
-    def get_distance_embedding(self, landmarks):
+    def _get_distance_embedding(self, landmarks):
         """
         Computes a (M,1) vector where each element represents a distance between
         two keypoints of the hand.
         """
         tuple_names = [
             # Distances between finger tip and finger base
+            ("thumb_0", "thumb_3"),
             ("index_0", "index_3"),
             ("middle_0", "middle_3"),
             ("ring_0", "ring_3"),
@@ -86,11 +87,10 @@ class HandModel(object):
             ("middle_3", "pinky_3"),
             ("ring_3", "pinky_3"),
         ]
-        return np.array(list(map(lambda t: self.get_distance_by_names(landmarks, t[0], t[1]), tuple_names)))
+        return np.array(list(map(lambda t: self._get_distance_by_names(landmarks, t[0], t[1]), tuple_names)))
 
-    def get_distance_by_names(self, landmarks, name_from, name_to):
+    def _get_distance_by_names(self, landmarks, name_from, name_to):
         landmark_from = landmarks[self.landmark_names.index(name_from)]
         landmark_to = landmarks[self.landmark_names.index(name_to)]
         distance = np.linalg.norm(landmark_to - landmark_from)
-        # assert len(distance) == 1
         return distance

@@ -1,25 +1,41 @@
 from models.hand_model import HandModel
+from models.pose_model import PoseModel
 
 
 class SignModel(object):
 
-    def __init__(self, left_hand_list, right_hand_list):
+    def __init__(self, pose_list, left_hand_list, right_hand_list):
         """
         Args
             landmarks_list: numpy array of shape (N,21,3) containing
                         the 3D coordinates of the 21 hand keypoints of the N frames of a video
         """
-        self.left_hand_list = left_hand_list
-        self.right_hand_list = right_hand_list
-
-        self.lh_embedding = self._get_embedding_from_landmark_list(left_hand_list)
-        self.rh_embedding = self._get_embedding_from_landmark_list(right_hand_list)
+        self.lh_embedding = self._get_embedding_from_landmark_list(left_hand_list, pose_list, hand="left")
+        self.rh_embedding = self._get_embedding_from_landmark_list(right_hand_list, pose_list, hand="right")
 
     @staticmethod
-    def _get_embedding_from_landmark_list(landmarks_list):
+    def _get_embedding_from_landmark_list(hand_list, pose_list, hand):
+        try:
+            assert len(hand_list) == len(pose_list)
+        except AssertionError:
+            print(
+                f"""Hand movement and Pose movement don't have the same number of frames: 
+                hand_len:{len(hand_list)} != pose_len:{len(pose_list)}"""
+            )
+
         embeddings = []
-        for landmarks in landmarks_list:
-            hand_gesture = HandModel(landmarks)
-            embeddings.append(hand_gesture.embedding)
+        for frame_idx in range(len(hand_list)):
+            hand_gesture = HandModel(hand_list[frame_idx])
+            pose = PoseModel(pose_list[frame_idx])
+
+            embedding = hand_gesture.embedding
+            if hand == "left":
+                embedding += pose.left_arm_landmarks
+            elif hand == "right":
+                embedding += pose.right_arm_landmarks
+            else:
+                raise ValueError(f"Error in the hand type: {hand} type was passed.")
+
+            embeddings.append(embedding)
         return embeddings
 

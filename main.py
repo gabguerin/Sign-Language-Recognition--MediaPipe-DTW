@@ -12,6 +12,7 @@ if __name__ == "__main__":
     videos = [name.replace(".mp4", "") for name in os.listdir("data/videos") if name.endswith(".mp4")]
     dataset = [name for name in os.listdir("data/dataset") if not name.startswith(".")]
 
+    # Create the dataset from the reference videos
     videos_not_in_dataset = list(set(videos).difference(set(dataset)))
     for video in videos_not_in_dataset:
         save_landmarks_from_video(video + ".mp4")
@@ -26,9 +27,13 @@ if __name__ == "__main__":
 
         sign_dictionary[sign_name] = SignModel(left_hand_landmarks, right_hand_landmarks)
 
+    # Object that updates the frame, store mediapipe results and
+    # computes the distance between your sign & the reference signs
     webcam_manager = WebcamManager(sign_dictionary)
 
+    # Turn on the webcam
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    # Set up the Mediapipe environment
     with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
         while cap.isOpened():
 
@@ -41,13 +46,13 @@ if __name__ == "__main__":
             # Update frame and process results
             webcam_manager.update(frame, results)
 
-            # Break pressing q
-            if cv2.waitKey(5) & 0xFF == ord('q'):
-                break
-
             # Record pressing s
             if cv2.waitKey(5) & 0xFF == ord('s'):
                 webcam_manager.record()
+
+            # Break pressing q
+            if cv2.waitKey(5) & 0xFF == ord('q'):
+                break
 
         cap.release()
         cv2.destroyAllWindows()
