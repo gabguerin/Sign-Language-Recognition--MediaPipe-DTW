@@ -28,7 +28,7 @@ class SignRecorder(object):
         self.sign_distances = {k: 0 for k, _ in self.sign_dictionary}
         self.recording = True
 
-    def process_results(self, results):
+    def process_results(self, results) -> str:
         """
         If the SignRecorder is in the recording state:
             it stores the landmarks during seq_len frames and then computes the sign distances

@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 from utils.mediapipe_utils import draw_landmarks
 
@@ -9,13 +10,13 @@ WIDTH = 1400
 
 class WebcamManager(object):
     """
-    Object that displays the Webcam output, draws the landmarks detected
-    and outputs the sign prediction
+    Object that displays the Webcam output, draws the landmarks detected and
+     outputs the sign prediction
     """
     def __init__(self, sign_detected: str):
         self.sign_detected = sign_detected
 
-    def update(self, frame, results, sign_detected):
+    def update(self, frame: np.ndarray, results, sign_detected: str):
         self.sign_detected = sign_detected
 
         # Draw landmarks
@@ -33,14 +34,14 @@ class WebcamManager(object):
 
     def draw_text(self,
                   frame,
-                  font=cv2.FONT_HERSHEY_DUPLEX,
-                  font_size=3,
-                  font_thickness=2,
+                  font=cv2.FONT_HERSHEY_COMPLEX,
+                  font_size=2,
+                  font_thickness=4,
                   offset=20,
-                  bg_color=(232, 254, 255, 0.8)):
+                  bg_color=(232, 254, 255, 0.85)):
         (text_w, text_h), _ = cv2.getTextSize(self.sign_detected, font, font_size, font_thickness)
 
-        text_x, text_y = int((WIDTH + text_w) / 2), HEIGHT - text_h - offset
+        text_x, text_y = int((WIDTH - text_w) / 2), HEIGHT - text_h - offset
 
         cv2.rectangle(frame, (0, text_y - offset), (WIDTH, HEIGHT), bg_color, -1)
         cv2.putText(
@@ -49,7 +50,7 @@ class WebcamManager(object):
             (text_x, text_y + text_h + font_size - 1),
             font,
             font_size,
-            (255, 255, 255),
+            (20, 20, 20),
             font_thickness,
         )
         return frame

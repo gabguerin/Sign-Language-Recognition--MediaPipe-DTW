@@ -37,7 +37,7 @@ if __name__ == "__main__":
     sign_recorder = SignRecorder(sign_dictionary, sign_distances)
 
     # Object that draws keypoints & displays results
-    webcam_manager = WebcamManager(sign_distances)
+    webcam_manager = WebcamManager(sign_recorder)
 
     # Turn on the webcam
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
