@@ -1,28 +1,33 @@
 from fastdtw import fastdtw
-import numpy as np
+from scipy.spatial.distance import euclidean
+from models.sign_model import SignModel
 
 
-def dtw_distances(action, signs):
-    arr = []
-    action_lh, action_rh = action
-    for sign in signs:
-        # dist: sum of the dtw distance of left hand and right hand
-        dist = 0
-        # If the action and the sign use the same hands:
-        #      compute the fasdtw distance
-        # If not:
-        #      distance is greater than 1000
-        sign_lh, sign_rh = sign
-        if len(sign_lh) > 0:
-            if len(action_lh) > 0:
-                dist += fastdtw(action_lh, sign_lh)[0]
-            else:
-                dist += 1000
-        if len(sign_rh) > 0:
-            if len(action_rh) > 0:
-                dist += fastdtw(action_rh, sign_rh)[0]
-            else:
-                dist += 1000
+def dtw_distances(recorded_sign: SignModel, sign_dictionary: dict):
+    """
+    Use DTW to compute similarity between the recorded sign & the reference signs
 
-        arr.append(dist)
-    return arr
+    :param recorded_sign: a SignModel object containing the data gathered during record
+    :param sign_dictionary: A dictionary of SignModel objects containing the reference signs
+    :return: Return a sign dictionary sorted by the distances from the recorded sign
+    """
+    # Embeddings of the recorded sign
+    recorded_left_hand = recorded_sign.lh_embedding
+    recorded_right_hand = recorded_sign.rh_embedding
+
+    sign_distances = {}
+    for sign_name, sign_model in sign_dictionary.items():
+        # If the reference sign has the same number of hands compute fastdtw
+        if (recorded_sign.has_left_hand == sign_model.has_left_hand) and (
+            recorded_sign.has_right_hand == sign_model.has_right_hand
+        ):
+            sign_left_hand = sign_model.lh_embedding
+            sign_right_hand = sign_model.rh_embedding
+
+            sign_distances[sign_name] = fastdtw(
+                recorded_left_hand, sign_left_hand, dist=euclidean
+            ) + fastdtw(recorded_right_hand, sign_right_hand, dist=euclidean)
+        # If not store a None value
+        else:
+            sign_distances[sign_name] = None
+    return dict(sorted(sign_distances.items(), key=lambda item: item[1], reverse=True))

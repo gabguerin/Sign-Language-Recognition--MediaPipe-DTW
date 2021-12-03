@@ -3,13 +3,15 @@ from models.pose_model import PoseModel
 
 
 class SignModel(object):
-
     def __init__(self, pose_list, left_hand_list, right_hand_list):
         """
         Args
             landmarks_list: numpy array of shape (N,21,3) containing
                         the 3D coordinates of the 21 hand keypoints of the N frames of a video
         """
+        self.has_left_hand = (sum(left_hand_list) != 0)
+        self.has_right_hand = (sum(right_hand_list) != 0)
+
         self.lh_embedding = self._get_embedding_from_landmark_list(left_hand_list, pose_list, hand="left")
         self.rh_embedding = self._get_embedding_from_landmark_list(right_hand_list, pose_list, hand="right")
 
@@ -34,7 +36,7 @@ class SignModel(object):
             elif hand == "right":
                 embedding += pose.right_arm_landmarks
             else:
-                raise ValueError(f"Error in the hand type: {hand} type was passed.")
+                raise ValueError(f"Error in the hand type: {hand} type does not exist.")
 
             embeddings.append(embedding)
         return embeddings

@@ -22,14 +22,14 @@ def extract_keypoints(results):
     """
     pose = landmark_to_array(results.pose_landmarks).reshape(63).tolist()
 
-    lh = np.zeros(63).tolist()
+    left_hand = np.zeros(63).tolist()
     if results.left_hand_landmarks:
-        lh = landmark_to_array(results.left_hand_landmarks).reshape(63).tolist()
+        left_hand = landmark_to_array(results.left_hand_landmarks).reshape(63).tolist()
 
-    rh = np.zeros(63).tolist()
+    right_hand = np.zeros(63).tolist()
     if results.right_hand_landmarks:
-        rh = landmark_to_array(results.right_hand_landmarks).reshape(63).tolist()
-    return pose, lh, rh
+        right_hand = landmark_to_array(results.right_hand_landmarks).reshape(63).tolist()
+    return pose, left_hand, right_hand
 
 
 def save_landmarks_from_video(video, folder="videos"):
@@ -39,7 +39,7 @@ def save_landmarks_from_video(video, folder="videos"):
     # Set the Video stream
     cap = cv2.VideoCapture(os.path.join(folder, video))
     with mp.solutions.holistic.Holistic(
-        min_detection_confidence=0.25, min_tracking_confidence=0.5
+        min_detection_confidence=0.5, min_tracking_confidence=0.5
     ) as holistic:
         while cap.isOpened():
             ret, frame = cap.read()
@@ -48,10 +48,10 @@ def save_landmarks_from_video(video, folder="videos"):
                 image, results = mediapipe_detection(frame, holistic)
 
                 # Store results
-                pose, lh, rh = extract_keypoints(results)
+                pose, left_hand, right_hand = extract_keypoints(results)
                 landmark_list["pose"].append(pose)
-                landmark_list["left_hand"].append(lh)
-                landmark_list["right_hand"].append(rh)
+                landmark_list["left_hand"].append(left_hand)
+                landmark_list["right_hand"].append(right_hand)
             else:
                 break
         cap.release()
