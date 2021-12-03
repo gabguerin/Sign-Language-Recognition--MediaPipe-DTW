@@ -30,6 +30,7 @@ if __name__ == "__main__":
 
         sign_dictionary[sign_name] = SignModel(pose_list, left_hand_list, right_hand_list)
 
+    # Create dictionary of distances between reference signs and the recorded sign
     sign_distances = {k: 0 for k, _ in sign_dictionary}
 
     # Object that stores mediapipe results and computes sign similarities
