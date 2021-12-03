@@ -11,7 +11,7 @@ from webcam_manager import WebcamManager
 
 if __name__ == "__main__":
 
-    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "videos")) if name.endswith(".mp4")]
+    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "video")) if name.endswith(".mp4")]
     dataset = [name for name in os.listdir(os.path.join("data", "dataset")) if not name.startswith(".")]
 
     # Create the dataset from the reference videos
