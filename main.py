@@ -8,10 +8,11 @@ from utils.landmark_utils import save_landmarks_from_video, load_array
 from sign_recorder import SignRecorder
 from webcam_manager import WebcamManager
 
+
 if __name__ == "__main__":
 
-    videos = [name.replace(".mp4", "") for name in os.listdir("data/videos") if name.endswith(".mp4")]
-    dataset = [name for name in os.listdir("data/dataset") if not name.startswith(".")]
+    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "videos")) if name.endswith(".mp4")]
+    dataset = [name for name in os.listdir(os.path.join("data", "dataset")) if not name.startswith(".")]
 
     # Create the dataset from the reference videos
     videos_not_in_dataset = list(set(videos).difference(set(dataset)))
@@ -21,7 +22,7 @@ if __name__ == "__main__":
     # Create a dictionary of reference signs
     sign_dictionary = {}
     for sign_name in dataset:
-        path = os.path.join("data/dataset", sign_name)
+        path = os.path.join("data", "dataset", sign_name)
 
         pose_list = load_array(os.path.join(path, f"pose_{sign_name}.pickle"))
         left_hand_list = load_array(os.path.join(path, f"lh_{sign_name}.pickle"))
@@ -50,10 +51,10 @@ if __name__ == "__main__":
             image, results = utils.mediapipe_detection(frame, holistic)
 
             # Process results
-            sign_distances = sign_recorder.process_results(results)
+            sign_detected = sign_recorder.process_results(results)
 
-            # Update the frame
-            webcam_manager.update(frame, results)
+            # Update the frame (draw landmarks & display result)
+            webcam_manager.update(frame, results, sign_detected)
 
             # Record pressing s
             if cv2.waitKey(5) & 0xFF == ord('s'):

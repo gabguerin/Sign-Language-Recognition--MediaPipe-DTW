@@ -1,17 +1,14 @@
-import cv2
-import numpy as np
-
-from dtw import dtw_distances
+from utils.dtw import dtw_distances
 from models.sign_model import SignModel
 from utils.landmark_utils import extract_keypoints
-from utils.mediapipe_utils import draw_landmarks
+
 
 BLUE_COLOR = (245, 15, 15)
 RED_COLOR = (15, 15, 245)
 
 
 class SignRecorder(object):
-    def __init__(self, sign_dictionary, sign_distances, seq_len=50):
+    def __init__(self, sign_dictionary: dict, sign_distances: dict, seq_len=50):
         # Variables for recording
         self.color = BLUE_COLOR
         self.recording = False
@@ -28,15 +25,25 @@ class SignRecorder(object):
         self.sign_distances = sign_distances
 
     def record(self):
+        self.sign_distances = {k: 0 for k, _ in self.sign_dictionary}
         self.recording = True
 
     def process_results(self, results):
+        """
+        If the SignRecorder is in the recording state:
+            it stores the landmarks during seq_len frames and then computes the sign distances
+        :param results: mediapipe output
+        :return: Return the word predicted or blank text if there is no distances
+        """
         if self.recording:
             if len(self.pose_list) < self.seq_len:
                 self.record_movement(results)
             else:
                 self.compute_distances()
-        return self.sign_distances
+        print(self.sign_distances)
+        if list(self.sign_distances.values()):
+            return ""
+        return list(self.sign_distances.keys())[0]
 
     def record_movement(self, results):
         # Record landmarks

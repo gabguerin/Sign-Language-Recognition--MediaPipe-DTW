@@ -26,16 +26,24 @@ def draw_landmarks(image, results):
     # Draw left hand connections
     mp_drawing.draw_landmarks(
         image,
-        results.left_hand_landmarks,
-        mp_holistic.HAND_CONNECTIONS,
-        mp_drawing.DrawingSpec(color=(119, 181, 254), thickness=1, circle_radius=4),
-        mp_drawing.DrawingSpec(color=(197, 216, 225), thickness=2, circle_radius=2),
+        landmark_list=results.right_hand_landmarks,
+        connections=mp_holistic.HAND_CONNECTIONS,
+        landmark_drawing_spec=mp_drawing.DrawingSpec(
+            color=(232, 254, 255), thickness=1, circle_radius=4
+        ),
+        connection_drawing_spec=mp_drawing.DrawingSpec(
+            color=(161, 249, 255), thickness=2, circle_radius=2
+        ),
     )
     # Draw right hand connections
     mp_drawing.draw_landmarks(
         image,
-        results.right_hand_landmarks,
-        mp_holistic.HAND_CONNECTIONS,
-        mp_drawing.DrawingSpec(color=(119, 181, 254), thickness=1, circle_radius=4),
-        mp_drawing.DrawingSpec(color=(197, 216, 225), thickness=2, circle_radius=2),
+        landmark_list=results.right_hand_landmarks,
+        connections=mp_holistic.HAND_CONNECTIONS,
+        landmark_drawing_spec=mp_drawing.DrawingSpec(
+            color=(232, 254, 255), thickness=1, circle_radius=4
+        ),
+        connection_drawing_spec=mp_drawing.DrawingSpec(
+            color=(161, 249, 255), thickness=2, circle_radius=2
+        ),
     )
