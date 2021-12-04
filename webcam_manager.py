@@ -1,13 +1,14 @@
 import cv2
 import numpy as np
+import mediapipe as mp
 
 from utils.mediapipe_utils import draw_landmarks
 
 
-BLUE_COLOR = (245, 242, 176)
+BLUE_COLOR = (245, 242, 226)
 RED_COLOR = (25, 35, 240)
 
-HEIGHT = 1200
+HEIGHT = 600
 
 
 class WebcamManager(object):
@@ -22,11 +23,14 @@ class WebcamManager(object):
         self.sign_detected = sign_detected
 
         # Draw landmarks
-        frame = draw_landmarks(frame, results)
+        self.draw_landmarks(frame, results)
 
         WIDTH = int(HEIGHT * len(frame[0]) / len(frame))
         # Resize frame
         frame = cv2.resize(frame, (WIDTH, HEIGHT), interpolation=cv2.INTER_AREA)
+
+        # Flip the image vertically for mirror effect
+        frame = cv2.flip(frame, 1)
 
         # Write result if there is
         frame = self.draw_text(frame)
@@ -44,8 +48,8 @@ class WebcamManager(object):
                   frame,
                   font=cv2.FONT_HERSHEY_COMPLEX,
                   font_size=2,
-                  font_thickness=4,
-                  offset=20,
+                  font_thickness=2,
+                  offset=int(HEIGHT*0.01),
                   bg_color=(245, 242, 176, 0.85)):
         window_w = int(HEIGHT * len(frame[0]) / len(frame))
 
@@ -60,7 +64,45 @@ class WebcamManager(object):
             (text_x, text_y + text_h + font_size - 1),
             font,
             font_size,
-            (20, 20, 20),
+            (158, 92, 47),
             font_thickness,
         )
         return frame
+
+
+    def draw_landmarks(self, image, results):
+        mp_holistic = mp.solutions.holistic  # Holistic model
+        mp_drawing = mp.solutions.drawing_utils  # Drawing utilities
+
+        # Draw pose connections
+        # mp_drawing.draw_landmarks(
+        #     image,
+        #    results.pose_landmarks,
+        #     mp_holistic.POSE_CONNECTIONS,
+        #     mp_drawing.DrawingSpec(color=(235, 52, 86), thickness=2, circle_radius=4),
+        #     mp_drawing.DrawingSpec(color=(52, 235, 103), thickness=2, circle_radius=2),
+        # )
+        # Draw left hand connections
+        mp_drawing.draw_landmarks(
+                image,
+                landmark_list=results.left_hand_landmarks,
+                connections=mp_holistic.HAND_CONNECTIONS,
+                landmark_drawing_spec=mp_drawing.DrawingSpec(
+                    color=(232, 254, 255), thickness=1, circle_radius=4
+                ),
+                connection_drawing_spec=mp_drawing.DrawingSpec(
+                    color=(255, 249, 161), thickness=2, circle_radius=2
+                ),
+        )
+        # Draw right hand connections
+        mp_drawing.draw_landmarks(
+                image,
+                landmark_list=results.right_hand_landmarks,
+                connections=mp_holistic.HAND_CONNECTIONS,
+                landmark_drawing_spec=mp_drawing.DrawingSpec(
+                    color=(232, 254, 255), thickness=1, circle_radius=4
+                ),
+                connection_drawing_spec=mp_drawing.DrawingSpec(
+                    color=(255, 249, 161), thickness=2, circle_radius=2
+                ),
+        )

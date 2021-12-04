@@ -4,7 +4,7 @@ from utils.landmark_utils import extract_keypoints
 
 
 class SignRecorder(object):
-    def __init__(self, sign_dictionary: dict, sign_distances: dict, seq_len=50):
+    def __init__(self, sign_dictionary: dict, sign_distances: dict, seq_len=40):
         # Variables for recording
         self.is_recording = False
         self.seq_len = seq_len
@@ -23,7 +23,7 @@ class SignRecorder(object):
         """
         Initialize sign_distances & start recording
         """
-        self.sign_distances = {k: 0 for k, _ in self.sign_dictionary}
+        self.sign_distances = {k: 0 for k, _ in self.sign_dictionary.items()}
         self.is_recording = True
 
     def process_results(self, results) -> (str, bool):

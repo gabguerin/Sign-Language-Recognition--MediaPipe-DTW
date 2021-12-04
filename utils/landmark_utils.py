@@ -13,7 +13,7 @@ def landmark_to_array(landmark_list):
     keypoints = []
     for landmark in landmark_list.landmark:
         keypoints.append([landmark.x, landmark.y, landmark.z])
-    return np.array(keypoints)
+    return np.nan_to_num(keypoints)
 
 
 def extract_keypoints(results):
@@ -23,7 +23,7 @@ def extract_keypoints(results):
     :param results: mediapipe object that contains the 3D position of all keypoints
     :return: Two np arrays of size (1, 21 * 3) = (1, nb_keypoints * nb_coordinates) corresponding to both hands
     """
-    pose = landmark_to_array(results.pose_landmarks).reshape(63).tolist()
+    pose = landmark_to_array(results.pose_landmarks).reshape(99).tolist()
 
     left_hand = np.zeros(63).tolist()
     if results.left_hand_landmarks:
@@ -40,7 +40,7 @@ def save_landmarks_from_video(video, folder="videos"):
     sign_name = video.replace(".mp4", "")
 
     # Set the Video stream
-    cap = cv2.VideoCapture(os.path.join(folder, video))
+    cap = cv2.VideoCapture(os.path.join("data", folder, video))
     with mp.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5
     ) as holistic:

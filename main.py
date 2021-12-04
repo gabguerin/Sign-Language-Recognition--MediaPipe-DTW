@@ -12,7 +12,7 @@ from webcam_manager import WebcamManager
 
 if __name__ == "__main__":
 
-    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "video")) if name.endswith(".mp4")]
+    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "videos")) if name.endswith(".mp4")]
     dataset = [name for name in os.listdir(os.path.join("data", "dataset")) if not name.startswith(".")]
 
     # Create the dataset from the reference videos
@@ -32,7 +32,7 @@ if __name__ == "__main__":
         sign_dictionary[sign_name] = SignModel(pose_list, left_hand_list, right_hand_list)
 
     # Initialize dictionary of distances between reference signs and the recorded sign
-    sign_distances = {k: 0 for k, _ in sign_dictionary}
+    sign_distances = {k: 0 for k, _ in sign_dictionary.items()}
 
     # Object that stores mediapipe results and computes sign similarities
     sign_recorder = SignRecorder(sign_dictionary, sign_distances)

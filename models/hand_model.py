@@ -32,8 +32,10 @@ class HandModel(object):
             "pinky_3",
         ]
 
+        # Reshape landmarks
+        self.landmarks = np.array(landmarks).reshape((21,3))
         # Normalize dataset
-        self.landmarks = self._normalize_landmarks(landmarks)
+        self.landmarks = self._normalize_landmarks(self.landmarks)
 
         # Compute embeddings
         self.embedding = self._get_distance_embedding(self.landmarks)
@@ -87,10 +89,19 @@ class HandModel(object):
             ("middle_3", "pinky_3"),
             ("ring_3", "pinky_3"),
         ]
-        return np.array(list(map(lambda t: self._get_distance_by_names(landmarks, t[0], t[1]), tuple_names)))
+        return (
+                list(map(lambda t: self._get_distance_by_names(landmarks, t[0], t[1]), tuple_names)) +
+                list(map(lambda t: self._get_2d_distance_by_names(landmarks, t[0], t[1]), tuple_names))
+        )
 
     def _get_distance_by_names(self, landmarks, name_from, name_to):
         landmark_from = landmarks[self.landmark_names.index(name_from)]
         landmark_to = landmarks[self.landmark_names.index(name_to)]
+        distance = np.linalg.norm(landmark_to - landmark_from)
+        return distance
+
+    def _get_2d_distance_by_names(self, landmarks, name_from, name_to):
+        landmark_from = landmarks[self.landmark_names.index(name_from)][:2]
+        landmark_to = landmarks[self.landmark_names.index(name_to)][:2]
         distance = np.linalg.norm(landmark_to - landmark_from)
         return distance

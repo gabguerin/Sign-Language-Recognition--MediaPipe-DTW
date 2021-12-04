@@ -24,10 +24,13 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: dict):
             sign_left_hand = sign_model.lh_embedding
             sign_right_hand = sign_model.rh_embedding
 
-            sign_distances[sign_name] = fastdtw(
-                recorded_left_hand, sign_left_hand, dist=euclidean
-            ) + fastdtw(recorded_right_hand, sign_right_hand, dist=euclidean)
+            sign_distances[sign_name] = 0
+            if recorded_sign.has_left_hand:
+                sign_distances[sign_name] += fastdtw(recorded_left_hand, sign_left_hand)[0]
+            if recorded_sign.has_right_hand:
+                sign_distances[sign_name] += fastdtw(recorded_right_hand, sign_right_hand)[0]
+
         # If not, distance equals 10000
         else:
             sign_distances[sign_name] = 10000
-    return dict(sorted(sign_distances.items(), key=lambda item: item[1], reverse=True))
+    return dict(sorted(sign_distances.items(), key=lambda item: item[1]))
