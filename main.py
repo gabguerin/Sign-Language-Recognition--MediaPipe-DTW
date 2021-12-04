@@ -4,7 +4,7 @@ import utils
 import os
 
 from models.sign_model import SignModel
-from utils import mediapipe_utils
+from utils.mediapipe_utils import mediapipe_detection
 from utils.landmark_utils import save_landmarks_from_video, load_array
 from sign_recorder import SignRecorder
 from webcam_manager import WebcamManager
@@ -50,7 +50,7 @@ if __name__ == "__main__":
             ret, frame = cap.read()
 
             # Make detections
-            image, results = mediapipe_utils.mediapipe_detection(frame, holistic)
+            image, results = mediapipe_detection(frame, holistic)
 
             # Process results
             sign_detected, is_recording = sign_recorder.process_results(results)

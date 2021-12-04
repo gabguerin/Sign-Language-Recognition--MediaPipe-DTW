@@ -3,10 +3,13 @@ import os
 import numpy as np
 import pickle as pkl
 import mediapipe as mp
-from mediapipe_utils import mediapipe_detection
+from utils.mediapipe_utils import mediapipe_detection
 
 
 def landmark_to_array(landmark_list):
+    """
+    Return a np array of size (nb_keypoints x 3)
+    """
     keypoints = []
     for landmark in landmark_list.landmark:
         keypoints.append([landmark.x, landmark.y, landmark.z])
@@ -18,7 +21,7 @@ def extract_keypoints(results):
     if a hand doesn't appear, return an array of zeros
 
     :param results: mediapipe object that contains the 3D position of all keypoints
-    :return: Two np arrays of size (1, 21 * 3) = (nb_keypoints * nb_coordinates) corresponding to both hands
+    :return: Two np arrays of size (1, 21 * 3) = (1, nb_keypoints * nb_coordinates) corresponding to both hands
     """
     pose = landmark_to_array(results.pose_landmarks).reshape(63).tolist()
 

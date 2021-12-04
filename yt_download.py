@@ -13,4 +13,7 @@ for video in playlist.videos:
 
 # Rename the files to have videos w/ the name "<sign_name>.mp4"
 for video in os.listdir(video_folder):
-    os.rename(video, video.replace(" - LSF", ""))
+    os.rename(
+        os.path.join(video_folder, video),
+        os.path.join(video_folder, video.replace(" - LSF", "")),
+    )

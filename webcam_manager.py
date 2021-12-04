@@ -8,7 +8,6 @@ BLUE_COLOR = (245, 242, 176)
 RED_COLOR = (25, 35, 240)
 
 HEIGHT = 1200
-WIDTH = 1400
 
 
 class WebcamManager(object):
@@ -25,6 +24,7 @@ class WebcamManager(object):
         # Draw landmarks
         frame = draw_landmarks(frame, results)
 
+        WIDTH = int(HEIGHT * len(frame[0]) / len(frame))
         # Resize frame
         frame = cv2.resize(frame, (WIDTH, HEIGHT), interpolation=cv2.INTER_AREA)
 
@@ -47,11 +47,13 @@ class WebcamManager(object):
                   font_thickness=4,
                   offset=20,
                   bg_color=(245, 242, 176, 0.85)):
+        window_w = int(HEIGHT * len(frame[0]) / len(frame))
+
         (text_w, text_h), _ = cv2.getTextSize(self.sign_detected, font, font_size, font_thickness)
 
-        text_x, text_y = int((WIDTH - text_w) / 2), HEIGHT - text_h - offset
+        text_x, text_y = int((window_w - text_w) / 2), HEIGHT - text_h - offset
 
-        cv2.rectangle(frame, (0, text_y - offset), (WIDTH, HEIGHT), bg_color, -1)
+        cv2.rectangle(frame, (0, text_y - offset), (window_w, HEIGHT), bg_color, -1)
         cv2.putText(
             frame,
             self.sign_detected,
