@@ -27,7 +27,7 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: dict):
             sign_distances[sign_name] = fastdtw(
                 recorded_left_hand, sign_left_hand, dist=euclidean
             ) + fastdtw(recorded_right_hand, sign_right_hand, dist=euclidean)
-        # If not store a None value
+        # If not, distance equals 10000
         else:
-            sign_distances[sign_name] = None
+            sign_distances[sign_name] = 10000
     return dict(sorted(sign_distances.items(), key=lambda item: item[1], reverse=True))

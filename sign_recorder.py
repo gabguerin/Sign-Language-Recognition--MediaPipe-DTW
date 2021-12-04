@@ -3,18 +3,13 @@ from models.sign_model import SignModel
 from utils.landmark_utils import extract_keypoints
 
 
-BLUE_COLOR = (245, 15, 15)
-RED_COLOR = (15, 15, 245)
-
-
 class SignRecorder(object):
     def __init__(self, sign_dictionary: dict, sign_distances: dict, seq_len=50):
         # Variables for recording
-        self.color = BLUE_COLOR
-        self.recording = False
+        self.is_recording = False
         self.seq_len = seq_len
 
-        # List of landmarks of size (nb_frames x nb_landmarks)
+        # List of landmarks of size (seq_len x nb_landmarks)
         self.left_hand_list = []
         self.right_hand_list = []
         self.pose_list = []
@@ -25,35 +20,38 @@ class SignRecorder(object):
         self.sign_distances = sign_distances
 
     def record(self):
+        """
+        Initialize sign_distances & start recording
+        """
         self.sign_distances = {k: 0 for k, _ in self.sign_dictionary}
-        self.recording = True
+        self.is_recording = True
 
-    def process_results(self, results) -> str:
+    def process_results(self, results) -> (str, bool):
         """
         If the SignRecorder is in the recording state:
             it stores the landmarks during seq_len frames and then computes the sign distances
         :param results: mediapipe output
-        :return: Return the word predicted or blank text if there is no distances
+        :return: Return the word predicted (blank text if there is no distances)
+                & the recording state
         """
-        if self.recording:
+        if self.is_recording:
             if len(self.pose_list) < self.seq_len:
                 self.record_movement(results)
             else:
                 self.compute_distances()
-        print(self.sign_distances)
-        if list(self.sign_distances.values()):
-            return ""
-        return list(self.sign_distances.keys())[0]
+                print(self.sign_distances)
+        if sum(self.sign_distances.values()) == 0:
+            return "", self.is_recording
+        return list(self.sign_distances.keys())[0], self.is_recording
 
     def record_movement(self, results):
-        # Record landmarks
+        """
+        Record pose, left_hand and right_hand landmarks
+        """
         pose, left_hand, right_hand = extract_keypoints(results)
         self.left_hand_list.append(left_hand)
         self.right_hand_list.append(right_hand)
         self.pose_list.append(pose)
-
-        # Red circle while recording
-        self.color = RED_COLOR
 
     def compute_distances(self):
         # Create a SignModel object with the landmarks gathered during recording
@@ -66,6 +64,4 @@ class SignRecorder(object):
         self.left_hand_list = []
         self.right_hand_list = []
         self.pose_list = []
-        self.recording = False
-        self.color = BLUE_COLOR
-
+        self.is_recording = False
