@@ -10,44 +10,49 @@ import pandas as pd
 
 
 if __name__ == '__main__':
+    # Sequence of landmarks
+    landmarks = os.listdir("landmarks")[1:]
+
 
     left_panel, right_panel = st.columns(2)
 
     with left_panel:
-        show_mediapipe = st.checkbox('Montrer Mediapipe')
+        show_mediapipe = st.checkbox('Afficher Mediapipe')
         video_panel = st.image([])
         record_sign = st.checkbox('Enregistrer')
 
     with right_panel:
         st.subheader("Dictionnaire")
 
-        videos = os.listdir("Videos")[2:]
-        first_sign_txt = st.text("- " + videos[0].replace(".mp4", ""))
-        second_sign_txt = st.text("- " + videos[1].replace(".mp4", ""))
-        third_sign_txt = st.text("- " + videos[2].replace(".mp4", ""))
-        fourth_sign_txt = st.text("- " + videos[3].replace(".mp4", ""))
-        fifth_sign_txt = st.text("- " + videos[4].replace(".mp4", ""))
+        sign_names = list(map(lambda x: x.replace(".pickle", ""), landmarks))
+        st.text("- " + sign_names[0])
+        st.text("- " + sign_names[1])
+        st.text("- " + sign_names[2])
+        st.text("- " + sign_names[3])
+        st.text("- " + sign_names[4])
 
-    landmarks = os.listdir("landmarks")[1:]
+        st.subheader("Résultat")
+        result_txt = st.code("")
+
+        st.subheader("Détails")
+        result_df_txt = st.dataframe()
+
+
     signs = []
     for landmark in landmarks:
-        path = os.path.join("landmarks",landmark)
+        path = os.path.join("landmarks", landmark)
         signs.append(utils.load_array(path))
 
-    # Sequence of landmarks
-    #utils.save_array([[], []], "save.pickle")
     lh_list, rh_list = [], []
-    seq_len = 50
-    count = 0
+    BLUE_COLOR = (255, 255, 255)
+    RED_COLOR = (25, 25, 255)
+    color = BLUE_COLOR
 
-    blue_color = (255, 25, 16)
-    red_color = (24, 44, 255)
-    color = blue_color
 
     results_df = pd.DataFrame({"signs": [], "distances": []})
 
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-    with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.25, min_tracking_confidence=0.25) as holistic:
+    with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.4, min_tracking_confidence=0.25) as holistic:
         while True:
             _, frame = cap.read()
             frame, results = utils.mediapipe_detection(frame, holistic)
@@ -61,7 +66,7 @@ if __name__ == '__main__':
                 rh_list.append(rh)
 
                 utils.save_array([lh_list, rh_list], "save.pickle")
-                color = red_color
+                color = RED_COLOR
 
             else:
                 lh_list, rh_list = utils.load_array("save.pickle")
@@ -69,19 +74,16 @@ if __name__ == '__main__':
                     action = np.array([lh_list, rh_list])
                     distances = dtw_distances(action, signs)
 
-                    results_df = pd.DataFrame({"signs": landmarks, "distances": distances}).sort_values(by=["distances"])
+                    results_df = pd.DataFrame({"signs": sign_names, "distances": distances}).sort_values(by=["distances"])
                     print(results_df)
                     signs_sorted = results_df.signs.values
-                    first_sign_txt.text("1. " + signs_sorted[0].replace(".pickle", ""))
-                    second_sign_txt.text("2. " + signs_sorted[1].replace(".pickle", ""))
-                    third_sign_txt.text("3. " + signs_sorted[2].replace(".pickle", ""))
-                    fourth_sign_txt.text("4. " + signs_sorted[3].replace(".pickle", ""))
-                    fifth_sign_txt.text("5. " + signs_sorted[4].replace(".pickle", ""))
+                    result_txt.code(signs_sorted[0].replace(".pickle", ""))
+                    result_df_txt.dataframe(results_df)
 
                     utils.save_array([[], []], "save.pickle")
                     lh_list, rh_list = [], []
 
-                color = blue_color
+                color = BLUE_COLOR
 
             # REC circle
             cv2.circle(frame, (30, 30), 20, color, -1)
