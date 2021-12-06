@@ -35,13 +35,13 @@ class SignModel(object):
             hand_gesture = HandModel(hand_list[frame_idx])
             pose = PoseModel(pose_list[frame_idx])
 
-            embedding = hand_gesture.embedding
-            if hand == "left":
-                embedding += pose.left_arm_embedding
-            elif hand == "right":
-                embedding += pose.right_arm_embedding
-            else:
-                raise ValueError(f"Error in the hand type: {hand} type does not exist.")
+            embedding = hand_gesture.feature_vector
+#            if hand == "left":
+#                embedding += pose.left_arm_embedding
+#            elif hand == "right":
+#                embedding += pose.right_arm_embedding
+#            else:
+#                raise ValueError(f"Error in the hand type: {hand} type does not exist.")
 
             embeddings.append(embedding)
         return embeddings

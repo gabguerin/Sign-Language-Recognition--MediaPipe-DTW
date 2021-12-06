@@ -57,7 +57,7 @@ class SignRecorder(object):
         # Create a SignModel object with the landmarks gathered during recording
         recorded_sign = SignModel(self.pose_list, self.left_hand_list, self.right_hand_list)
 
-        # Compute sign similarity with DTW (descending order)
+        # Compute sign similarity with DTW (ascending order)
         self.sign_distances = dtw_distances(recorded_sign, self.sign_dictionary)
 
         # Reset variables
