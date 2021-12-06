@@ -1,6 +1,5 @@
 import cv2
 import mediapipe
-import utils
 import os
 
 from models.sign_model import SignModel
@@ -50,7 +49,6 @@ if __name__ == "__main__":
             ret, frame = cap.read()
 
             # Make detections
-
             image, results = mediapipe_detection(frame, holistic)
 
             # Process results

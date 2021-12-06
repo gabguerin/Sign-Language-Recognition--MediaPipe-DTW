@@ -2,8 +2,6 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
-from utils.mediapipe_utils import draw_landmarks
-
 
 BLUE_COLOR = (245, 242, 226)
 RED_COLOR = (25, 35, 240)
@@ -69,19 +67,29 @@ class WebcamManager(object):
         )
         return frame
 
-
-    def draw_landmarks(self, image, results):
+    @staticmethod
+    def draw_landmarks(image, results):
         mp_holistic = mp.solutions.holistic  # Holistic model
         mp_drawing = mp.solutions.drawing_utils  # Drawing utilities
 
+        pose_connexions = [
+            (11, 12),
+            (11, 13),
+            (12, 14),
+            (13, 15),
+            (14, 16),
+            (11, 23),
+            (12, 24),
+        ]
+
         # Draw pose connections
-        # mp_drawing.draw_landmarks(
-        #     image,
-        #    results.pose_landmarks,
-        #     mp_holistic.POSE_CONNECTIONS,
-        #     mp_drawing.DrawingSpec(color=(235, 52, 86), thickness=2, circle_radius=4),
-        #     mp_drawing.DrawingSpec(color=(52, 235, 103), thickness=2, circle_radius=2),
-        # )
+        mp_drawing.draw_landmarks(
+            image,
+            pose_connexions,
+            mp_holistic.POSE_CONNECTIONS,
+            mp_drawing.DrawingSpec(color=(235, 52, 86), thickness=2, circle_radius=4),
+            mp_drawing.DrawingSpec(color=(52, 235, 103), thickness=2, circle_radius=2),
+        )
         # Draw left hand connections
         mp_drawing.draw_landmarks(
                 image,
