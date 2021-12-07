@@ -62,7 +62,7 @@ class WebcamManager(object):
             (text_x, text_y + text_h + font_size - 1),
             font,
             font_size,
-            (158, 92, 47),
+            (118, 62, 37),
             font_thickness,
         )
         return frame

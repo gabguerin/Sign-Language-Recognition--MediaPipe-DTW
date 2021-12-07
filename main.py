@@ -1,6 +1,7 @@
 import cv2
 import mediapipe
 import os
+import pandas as pd
 
 from models.sign_model import SignModel
 from utils.mediapipe_utils import mediapipe_detection
@@ -19,8 +20,8 @@ if __name__ == "__main__":
     for video in videos_not_in_dataset:
         save_landmarks_from_video(video + ".mp4")
 
-    # Create a dictionary of reference signs (key: sign_name, value: SignModel)
-    sign_dictionary = {}
+    # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
+    sign_dictionary = pd.DataFrame(columns=["name", "model", "distance"])
     for sign_name in dataset:
         path = os.path.join("data", "dataset", sign_name)
 
@@ -28,13 +29,16 @@ if __name__ == "__main__":
         left_hand_list = load_array(os.path.join(path, f"lh_{sign_name}.pickle"))
         right_hand_list = load_array(os.path.join(path, f"rh_{sign_name}.pickle"))
 
-        sign_dictionary[sign_name] = SignModel(pose_list, left_hand_list, right_hand_list)
-
-    # Initialize dictionary of distances between reference signs and the recorded sign
-    sign_distances = {k: 0 for k, _ in sign_dictionary.items()}
+        sign_dictionary = sign_dictionary.append(
+            {
+                "name": sign_name,
+                "model": SignModel(pose_list, left_hand_list, right_hand_list),
+                "distance": 0,
+            }
+        )
 
     # Object that stores mediapipe results and computes sign similarities
-    sign_recorder = SignRecorder(sign_dictionary, sign_distances)
+    sign_recorder = SignRecorder(sign_dictionary)
 
     # Object that draws keypoints & displays results
     webcam_manager = WebcamManager()
