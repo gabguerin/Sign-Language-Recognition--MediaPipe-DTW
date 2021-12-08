@@ -34,7 +34,8 @@ if __name__ == "__main__":
                 "name": sign_name,
                 "model": SignModel(pose_list, left_hand_list, right_hand_list),
                 "distance": 0,
-            }
+            },
+            ignore_index=True
         )
 
     # Object that stores mediapipe results and computes sign similarities
