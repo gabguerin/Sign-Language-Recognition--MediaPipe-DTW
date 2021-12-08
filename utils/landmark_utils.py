@@ -35,12 +35,12 @@ def extract_keypoints(results):
     return pose, left_hand, right_hand
 
 
-def save_landmarks_from_video(video, folder="videos"):
+def save_landmarks_from_video(video_name):
     landmark_list = {"pose": [], "left_hand": [], "right_hand": []}
-    sign_name = video.replace(".mp4", "")
+    sign_name = video_name.split("-")[0]
 
     # Set the Video stream
-    cap = cv2.VideoCapture(os.path.join("data", folder, video))
+    cap = cv2.VideoCapture(os.path.join("data", "videos", sign_name, video_name + ".mp4"))
     with mp.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5
     ) as holistic:
@@ -60,14 +60,14 @@ def save_landmarks_from_video(video, folder="videos"):
         cap.release()
 
     # Create the folder if not exists
-    path = os.path.join("data/dataset", sign_name)
+    path = os.path.join("data", "dataset", sign_name)
     if not os.path.exists(path):
         os.mkdir(path)
 
     # Saving the landmark_list in the correct folder
-    save_array(landmark_list["pose"], os.path.join(path, f"pose_{sign_name}.pickle"))
-    save_array(landmark_list["left_hand"], os.path.join(path, f"lh_{sign_name}.pickle"))
-    save_array(landmark_list["right_hand"], os.path.join(path, f"rh_{sign_name}.pickle"))
+    save_array(landmark_list["pose"], os.path.join(path, sign_name, f"pose_{video_name}.pickle"))
+    save_array(landmark_list["left_hand"], os.path.join(path, sign_name, f"lh_{video_name}.pickle"))
+    save_array(landmark_list["right_hand"], os.path.join(path, sign_name, f"rh_{video_name}.pickle"))
 
 
 def save_array(arr, path):

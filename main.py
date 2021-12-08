@@ -12,13 +12,23 @@ from webcam_manager import WebcamManager
 
 if __name__ == "__main__":
 
-    videos = [name.replace(".mp4", "") for name in os.listdir(os.path.join("data", "videos")) if name.endswith(".mp4")]
-    dataset = [name for name in os.listdir(os.path.join("data", "dataset")) if not name.startswith(".")]
+    videos = [
+        file_name.replace(".mp4", "")
+        for root, dirs, files in os.walk(os.path.join("data", "videos"))
+        for file_name in files
+        if file_name.endswith(".mp4")
+    ]
+    dataset = [
+        file_name.replace(".pickle", "")
+        for root, dirs, files in os.walk(os.path.join("data", "dataset"))
+        for file_name in files
+        if file_name.endswith(".pickle")
+    ]
 
     # Create the dataset from the reference videos
     videos_not_in_dataset = list(set(videos).difference(set(dataset)))
-    for video in videos_not_in_dataset:
-        save_landmarks_from_video(video + ".mp4")
+    for video_name in videos_not_in_dataset:
+        save_landmarks_from_video(video_name)
 
     # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
     sign_dictionary = pd.DataFrame(columns=["name", "model", "distance"])

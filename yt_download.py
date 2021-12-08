@@ -24,16 +24,15 @@ def download_video(name, video_id, start_time, duration_time):
     if not os.path.exists(os.path.join(FOLDER, file_name)):
         video.download(FOLDER)
 
+    output_file = os.path.join(file_path, name + "-" + video_id + ".mp4")
     if start_time != start_time and duration_time != duration_time:
         copyfile(
-            src=os.path.join(FOLDER, file_name), dst=os.path.join(file_path, file_name)
+            src=os.path.join(FOLDER, file_name), dst=output_file
         )
     else:
         original_video = os.path.join(FOLDER, file_name)
-        clip = os.path.join(file_path, name + "-" + video_id + ".mp4")
-
         os.system(
-            f'ffmpeg -ss {start_time} -i "{original_video}" -to {duration_time} -c copy "{clip}"'
+            f'ffmpeg -ss {start_time} -i "{original_video}" -to {duration_time} -c copy "{output_file}"'
         )
 
 
