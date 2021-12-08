@@ -1,6 +1,6 @@
-mediapipe==0.8.7.3
-matplotlib
-opencv-contrib-python==3.4.2.16
-opencv-python==4.5.1.48
-pytube==11.0.1
 fastdtw==0.3.4
+mediapipe==0.8.7.3
+opencv-contrib-python==4.5.4.60
+opencv-python==4.5.3.56
+pandas==1.3.2
+pytube==11.0.1
