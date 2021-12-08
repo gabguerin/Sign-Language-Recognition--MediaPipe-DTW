@@ -1,6 +1,5 @@
 import pandas as pd
 from fastdtw import fastdtw
-from scipy.spatial.distance import euclidean
 from models.sign_model import SignModel
 
 
@@ -27,7 +26,6 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
             sign_left_hand = sign_model.lh_embedding
             sign_right_hand = sign_model.rh_embedding
 
-            dtw = fastdtw(recorded_right_hand, sign_right_hand)
             if recorded_sign.has_left_hand:
                 row["distance"] += list(fastdtw(recorded_left_hand, sign_left_hand))[0]
             if recorded_sign.has_right_hand:

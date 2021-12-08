@@ -74,7 +74,7 @@ class SignRecorder(object):
         self.pose_list = []
         self.is_recording = False
 
-    def _get_sign_predicted(self, batch_size=1, threshold=0.5):
+    def _get_sign_predicted(self, batch_size=5, threshold=0.5):
         """
         Method that outputs the sign that appears the most in the list of closest
         reference signs, only if its proportion within the batch is greater than the threshold

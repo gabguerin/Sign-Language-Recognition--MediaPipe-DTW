@@ -19,7 +19,7 @@ if __name__ == "__main__":
         if file_name.endswith(".mp4")
     ]
     dataset = [
-        file_name.replace(".pickle", "")
+        os.path.dirname(file_name)
         for root, dirs, files in os.walk(os.path.join("data", "dataset"))
         for file_name in files
         if file_name.endswith(".pickle")

@@ -66,7 +66,7 @@ def save_landmarks_from_video(video_name):
 
     # Create the folder of the video data if it doesn't exists
     data_path = os.path.join(path, video_name)
-    if not os.path.exists(path):
+    if not os.path.exists(data_path):
         os.mkdir(data_path)
 
     # Saving the landmark_list in the correct folder
