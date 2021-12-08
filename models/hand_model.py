@@ -83,14 +83,19 @@ class HandModel(object):
         embedding = []
         for connexion_from in self.connexions:
             for connexion_to in self.connexions:
-                embedding.append(self._get_angle_between_vectors(connexion_from, connexion_to))
+                angle = self._get_angle_between_vectors(connexion_from, connexion_to)
+                # If the angle is not NaN we store it else we store 0
+                if angle == angle:
+                    embedding.append(angle)
+                else:
+                    embedding.append(0)
         return embedding
 
     @staticmethod
     def _get_angle_between_vectors(u: np.ndarray, v: np.ndarray):
         """
         The angle between two vector is:
-            Theta = ArcCOS(u_^v_ / ||u.v||2)
+            Theta = ARCCOS(u_^v_ / ||u.v||2)
         """
         dot_product = np.dot(u, v)
         norm = np.linalg.norm(u) * np.linalg.norm(v)

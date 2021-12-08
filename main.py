@@ -32,19 +32,21 @@ if __name__ == "__main__":
 
     # Create a DataFrame of reference signs (name: str, model: SignModel, distance: int)
     sign_dictionary = pd.DataFrame(columns=["name", "model", "distance"])
-    for sign_name in dataset:
-        path = os.path.join("data", "dataset", sign_name)
+    for video_name in videos:
+        sign_name = video_name.split("-")[0]
+        path = os.path.join("data", "dataset", sign_name, video_name)
 
-        pose_list = load_array(os.path.join(path, f"pose_{sign_name}.pickle"))
-        left_hand_list = load_array(os.path.join(path, f"lh_{sign_name}.pickle"))
-        right_hand_list = load_array(os.path.join(path, f"rh_{sign_name}.pickle"))
+        pose_list = load_array(os.path.join(path, f"pose_{video_name}.pickle"))
+        left_hand_list = load_array(os.path.join(path, f"lh_{video_name}.pickle"))
+        right_hand_list = load_array(os.path.join(path, f"rh_{video_name}.pickle"))
 
         sign_dictionary = sign_dictionary.append(
             {
                 "name": sign_name,
                 "model": SignModel(pose_list, left_hand_list, right_hand_list),
                 "distance": 0,
-            }
+            },
+            ignore_index=True
         )
 
     # Object that stores mediapipe results and computes sign similarities

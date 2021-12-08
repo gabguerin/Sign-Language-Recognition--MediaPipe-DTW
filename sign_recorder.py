@@ -8,7 +8,7 @@ from utils.landmark_utils import extract_keypoints
 
 
 class SignRecorder(object):
-    def __init__(self, sign_dictionary: pd.DataFrame[str, SignModel, int], seq_len=40):
+    def __init__(self, sign_dictionary: pd.DataFrame, seq_len=40):
         # Variables for recording
         self.is_recording = False
         self.seq_len = seq_len

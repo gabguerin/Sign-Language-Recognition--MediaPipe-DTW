@@ -27,12 +27,13 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
             sign_left_hand = sign_model.lh_embedding
             sign_right_hand = sign_model.rh_embedding
 
+            dtw = fastdtw(recorded_right_hand, sign_right_hand)
             if recorded_sign.has_left_hand:
-                row["distance"] += fastdtw(recorded_left_hand, sign_left_hand)[0]
+                row["distance"] += list(fastdtw(recorded_left_hand, sign_left_hand))[0]
             if recorded_sign.has_right_hand:
-                row["distance"] += fastdtw(recorded_right_hand, sign_right_hand)[0]
+                row["distance"] += list(fastdtw(recorded_right_hand, sign_right_hand))[0]
 
-        # If not, distance equals 10000
+        # If not, distance equals 100000
         else:
-            row["distance"] = 10000
+            row["distance"] = 100000
     return sign_dictionary.sort_values(by=["distance"])

@@ -59,15 +59,20 @@ def save_landmarks_from_video(video_name):
                 break
         cap.release()
 
-    # Create the folder if not exists
+    # Create the folder of the sign if it doesn't exists
     path = os.path.join("data", "dataset", sign_name)
     if not os.path.exists(path):
         os.mkdir(path)
 
+    # Create the folder of the video data if it doesn't exists
+    data_path = os.path.join(path, video_name)
+    if not os.path.exists(path):
+        os.mkdir(data_path)
+
     # Saving the landmark_list in the correct folder
-    save_array(landmark_list["pose"], os.path.join(path, sign_name, f"pose_{video_name}.pickle"))
-    save_array(landmark_list["left_hand"], os.path.join(path, sign_name, f"lh_{video_name}.pickle"))
-    save_array(landmark_list["right_hand"], os.path.join(path, sign_name, f"rh_{video_name}.pickle"))
+    save_array(landmark_list["pose"], os.path.join(data_path, f"pose_{video_name}.pickle"))
+    save_array(landmark_list["left_hand"], os.path.join(data_path, f"lh_{video_name}.pickle"))
+    save_array(landmark_list["right_hand"], os.path.join(data_path, f"rh_{video_name}.pickle"))
 
 
 def save_array(arr, path):
