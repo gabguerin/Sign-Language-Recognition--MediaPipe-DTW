@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 "model": SignModel(pose_list, left_hand_list, right_hand_list),
                 "distance": 0,
             },
-            ignore_index=True
+            ignore_index=True,
         )
 
     # Object that stores mediapipe results and computes sign similarities
@@ -58,7 +58,9 @@ if __name__ == "__main__":
     # Turn on the webcam
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     # Set up the Mediapipe environment
-    with mediapipe.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+    with mediapipe.solutions.holistic.Holistic(
+        min_detection_confidence=0.5, min_tracking_confidence=0.5
+    ) as holistic:
         while cap.isOpened():
 
             # Read feed
@@ -74,11 +76,11 @@ if __name__ == "__main__":
             webcam_manager.update(frame, results, sign_detected, is_recording)
 
             # Record pressing s
-            if cv2.waitKey(5) & 0xFF == ord('s'):
+            if cv2.waitKey(5) & 0xFF == ord("s"):
                 sign_recorder.record()
 
             # Break pressing q
-            if cv2.waitKey(5) & 0xFF == ord('q'):
+            if cv2.waitKey(5) & 0xFF == ord("q"):
                 break
 
         cap.release()

@@ -36,7 +36,7 @@ class SignRecorder(object):
         """
         if self.is_recording:
             if len(self.recorded_results) < self.seq_len:
-                self.record_movement(results)
+                self.recorded_results.append(results)
             else:
                 self.compute_distances()
                 print(self.sign_dictionary)
@@ -45,12 +45,6 @@ class SignRecorder(object):
             return "", self.is_recording
 
         return self._get_sign_predicted(), self.is_recording
-
-    def record_movement(self, results):
-        """
-        Stores pose, left_hand and right_hand landmarks
-        """
-        self.recorded_results.append(results)
 
     def compute_distances(self):
         """
