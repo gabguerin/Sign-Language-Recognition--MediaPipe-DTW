@@ -75,12 +75,12 @@ if __name__ == "__main__":
             # Update the frame (draw landmarks & display result)
             webcam_manager.update(frame, results, sign_detected, is_recording)
 
-            # Record pressing s
-            if cv2.waitKey(5) & 0xFF == ord("s"):
+            pressedKey = cv2.waitKey(5) & 0xFF
+            # Record pressing r
+            if pressedKey == ord("r"):
                 sign_recorder.record()
-
             # Break pressing q
-            if cv2.waitKey(5) & 0xFF == ord("q"):
+            elif pressedKey == ord("q"):
                 break
 
         cap.release()

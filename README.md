@@ -4,6 +4,7 @@ This repository proposes an implementation of a Sign Recognition Model using the
 for keypoint extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
 
+#### Source : https://www.sicara.ai/blog/
 ___
 
 ## Set up
