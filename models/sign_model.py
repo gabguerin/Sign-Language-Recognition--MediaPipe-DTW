@@ -8,8 +8,8 @@ class SignModel(object):
     def __init__(self, pose_list, left_hand_list, right_hand_list):
         """
         Args
-            landmarks_list: numpy array of shape (N,21,3) containing
-                        the 3D coordinates of the 21 hand keypoints of the N frames of a video
+            landmarks_list: numpy array of shape (n_frames, n_keypoints, 3) containing
+                            the 3D coordinates of the keypoints in a video
         """
         self.has_left_hand = (np.sum(left_hand_list) != 0)
         self.has_right_hand = (np.sum(right_hand_list) != 0)
@@ -19,14 +19,6 @@ class SignModel(object):
 
     @staticmethod
     def _get_embedding_from_landmark_list(hand_list, pose_list, hand):
-        try:
-            assert len(hand_list) == len(pose_list)
-        except AssertionError:
-            print(
-                f"""Hand movement and Pose movement don't have the same number of frames: 
-                hand_len:{len(hand_list)} != pose_len:{len(pose_list)}"""
-            )
-
         embeddings = []
         for frame_idx in range(len(hand_list)):
             if np.sum(hand_list[frame_idx]) == 0:
