@@ -13,10 +13,8 @@ class SignRecorder(object):
         self.is_recording = False
         self.seq_len = seq_len
 
-        # List of landmarks of size (seq_len x nb_landmarks)
-        self.left_hand_list = []
-        self.right_hand_list = []
-        self.pose_list = []
+        # List of results stored each frame
+        self.recorded_results = []
 
         # DataFrame storing the distances between the recorded sign & all the reference signs from the dataset
         self.sign_dictionary = sign_dictionary
@@ -37,7 +35,7 @@ class SignRecorder(object):
                 & the recording state
         """
         if self.is_recording:
-            if len(self.pose_list) < self.seq_len:
+            if len(self.recorded_results) < self.seq_len:
                 self.record_movement(results)
             else:
                 self.compute_distances()
@@ -52,26 +50,28 @@ class SignRecorder(object):
         """
         Stores pose, left_hand and right_hand landmarks
         """
-        pose, left_hand, right_hand = extract_keypoints(results)
-        self.left_hand_list.append(left_hand)
-        self.right_hand_list.append(right_hand)
-        self.pose_list.append(pose)
+        self.recorded_results.append(results)
 
     def compute_distances(self):
         """
         Updates the distance column of the sign_dictionary
         and resets recording variables
         """
+        pose_list, left_hand_list, right_hand_list = [], [], []
+        for results in self.recorded_results:
+            pose, left_hand, right_hand = extract_keypoints(results)
+            pose_list.append(pose)
+            left_hand_list.append(left_hand)
+            right_hand_list.append(right_hand)
+
         # Create a SignModel object with the landmarks gathered during recording
-        recorded_sign = SignModel(self.pose_list, self.left_hand_list, self.right_hand_list)
+        recorded_sign = SignModel(pose_list, left_hand_list, right_hand_list)
 
         # Compute sign similarity with DTW (ascending order)
         self.sign_dictionary = dtw_distances(recorded_sign, self.sign_dictionary)
 
         # Reset variables
-        self.left_hand_list = []
-        self.right_hand_list = []
-        self.pose_list = []
+        self.recorded_results = []
         self.is_recording = False
 
     def _get_sign_predicted(self, batch_size=5, threshold=0.5):

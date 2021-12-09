@@ -15,7 +15,7 @@ ___
 - ` pip install -r requirements.txt `
 
 ### 3. Download or Import Videos of signs which will be considered as reference
-For french signs you can run:
+To create a small dataset of French signs run:
 
 - ` python yt_download.py `
 > N.B. The more videos for each sign you import, the better the prediction will be.
@@ -24,7 +24,7 @@ For french signs you can run:
 
 - ` python main.py `
 
-### 5. Press the 's' key (until the circle turns red) to record the sign. 
+### 5. Press the "r" key (until the circle turns red) to record the sign. 
 
 ___
 ## Code Description
