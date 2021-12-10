@@ -1,5 +1,6 @@
 import pandas as pd
 from fastdtw import fastdtw
+import numpy as np
 from models.sign_model import SignModel
 
 
@@ -33,5 +34,5 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
 
         # If not, distance equals 100000
         else:
-            row["distance"] = 100000
+            row["distance"] = np.inf
     return sign_dictionary.sort_values(by=["distance"])

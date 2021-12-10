@@ -45,9 +45,9 @@ class WebcamManager(object):
     def draw_text(self,
                   frame,
                   font=cv2.FONT_HERSHEY_COMPLEX,
-                  font_size=2,
+                  font_size=1,
                   font_thickness=2,
-                  offset=int(HEIGHT*0.01),
+                  offset=int(HEIGHT*0.02),
                   bg_color=(245, 242, 176, 0.85)):
         window_w = int(HEIGHT * len(frame[0]) / len(frame))
 
@@ -85,7 +85,7 @@ class WebcamManager(object):
         # Draw pose connections
         mp_drawing.draw_landmarks(
             image,
-            landmark_list=results.pose_landmarks,
+            landmark_list=[],
             connections=pose_connexions,
             landmark_drawing_spec=mp_drawing.DrawingSpec(
                 color=(235, 52, 86), thickness=2, circle_radius=4
@@ -100,7 +100,7 @@ class WebcamManager(object):
             landmark_list=results.left_hand_landmarks,
             connections=mp_holistic.HAND_CONNECTIONS,
             landmark_drawing_spec=mp_drawing.DrawingSpec(
-                color=(232, 254, 255), thickness=1, circle_radius=4
+                color=(232, 254, 255), thickness=1, circle_radius=1
             ),
             connection_drawing_spec=mp_drawing.DrawingSpec(
                 color=(255, 249, 161), thickness=2, circle_radius=2
@@ -112,7 +112,7 @@ class WebcamManager(object):
             landmark_list=results.right_hand_landmarks,
             connections=mp_holistic.HAND_CONNECTIONS,
             landmark_drawing_spec=mp_drawing.DrawingSpec(
-                color=(232, 254, 255), thickness=1, circle_radius=4
+                color=(232, 254, 255), thickness=1, circle_radius=1
             ),
             connection_drawing_spec=mp_drawing.DrawingSpec(
                 color=(255, 249, 161), thickness=2, circle_radius=2

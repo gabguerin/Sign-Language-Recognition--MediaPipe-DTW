@@ -19,10 +19,10 @@ if __name__ == "__main__":
         if file_name.endswith(".mp4")
     ]
     dataset = [
-        os.path.dirname(file_name)
+        file_name.replace(".pickle", "").replace("pose_", "")
         for root, dirs, files in os.walk(os.path.join("data", "dataset"))
         for file_name in files
-        if file_name.endswith(".pickle")
+        if file_name.endswith(".pickle") and file_name.startswith("pose_")
     ]
 
     # Create the dataset from the reference videos
@@ -75,7 +75,7 @@ if __name__ == "__main__":
             # Update the frame (draw landmarks & display result)
             webcam_manager.update(frame, results, sign_detected, is_recording)
 
-            pressedKey = cv2.waitKey(5) & 0xFF
+            pressedKey = cv2.waitKey(1) & 0xFF
             # Record pressing r
             if pressedKey == ord("r"):
                 sign_recorder.record()
