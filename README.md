@@ -3,6 +3,7 @@
 This repository proposes an implementation of a Sign Recognition Model using the **MediaPipe** library 
 for keypoint extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
+![Results with a small french language sign dictionary](https://media.giphy.com/media/4xQRRkUOgxox6ltTWs/giphy-downsized-large.gif)
 
 #### Source : https://www.sicara.ai/blog/
 ___

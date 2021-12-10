@@ -112,7 +112,7 @@ class WebcamManager(object):
             landmark_list=results.right_hand_landmarks,
             connections=mp_holistic.HAND_CONNECTIONS,
             landmark_drawing_spec=mp_drawing.DrawingSpec(
-                color=(232, 254, 255), thickness=1, circle_radius=1
+                color=(232, 254, 255), thickness=1, circle_radius=2
             ),
             connection_drawing_spec=mp_drawing.DrawingSpec(
                 color=(255, 249, 161), thickness=2, circle_radius=2

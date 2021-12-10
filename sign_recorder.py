@@ -8,7 +8,7 @@ from utils.landmark_utils import extract_keypoints
 
 
 class SignRecorder(object):
-    def __init__(self, sign_dictionary: pd.DataFrame, seq_len=40):
+    def __init__(self, sign_dictionary: pd.DataFrame, seq_len=50):
         # Variables for recording
         self.is_recording = False
         self.seq_len = seq_len
@@ -68,7 +68,7 @@ class SignRecorder(object):
         self.recorded_results = []
         self.is_recording = False
 
-    def _get_sign_predicted(self, batch_size=4, threshold=0.5):
+    def _get_sign_predicted(self, batch_size=3, threshold=1):
         """
         Method that outputs the sign that appears the most in the list of closest
         reference signs, only if its proportion within the batch is greater than the threshold
@@ -87,6 +87,6 @@ class SignRecorder(object):
         sign_counter = Counter(sign_names).most_common()
 
         predicted_sign, count = sign_counter[0]
-        if count / batch_size > threshold:
-            return predicted_sign
-        return "Signe inconnu"
+        if count / batch_size < threshold:
+            return "Signe inconnu"
+        return predicted_sign
