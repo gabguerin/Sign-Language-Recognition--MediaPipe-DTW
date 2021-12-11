@@ -30,7 +30,9 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
             if recorded_sign.has_left_hand:
                 row["distance"] += list(fastdtw(recorded_left_hand, sign_left_hand))[0]
             if recorded_sign.has_right_hand:
-                row["distance"] += list(fastdtw(recorded_right_hand, sign_right_hand))[0]
+                row["distance"] += list(fastdtw(recorded_right_hand, sign_right_hand))[
+                    0
+                ]
 
         # If not, distance equals 100000
         else:
