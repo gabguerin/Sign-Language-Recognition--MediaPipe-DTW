@@ -67,8 +67,9 @@ class HandModel(object):
         # Connexions between hand keypoints
         self.connexions = list(
             map(
-                lambda t: self.landmarks[KEYPOINTS.index(t[1])] - self.landmarks[KEYPOINTS.index(t[0])],
-                CONNEXIONS
+                lambda t: self.landmarks[KEYPOINTS.index(t[1])]
+                - self.landmarks[KEYPOINTS.index(t[0])],
+                CONNEXIONS,
             )
         )
 
@@ -82,6 +83,15 @@ class HandModel(object):
         """
         embedding = []
         for connexion_from in self.connexions:
+            embedding.append(
+                self._get_angle_between_vectors(connexion_from, np.array([1, 0, 0]))
+            )
+            embedding.append(
+                self._get_angle_between_vectors(connexion_from, np.array([0, 1, 0]))
+            )
+            embedding.append(
+                self._get_angle_between_vectors(connexion_from, np.array([0, 0, 1]))
+            )
             for connexion_to in self.connexions:
                 angle = self._get_angle_between_vectors(connexion_from, connexion_to)
                 # If the angle is not NaN we store it else we store 0
