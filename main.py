@@ -36,14 +36,13 @@ if __name__ == "__main__":
         sign_name = video_name.split("-")[0]
         path = os.path.join("data", "dataset", sign_name, video_name)
 
-        pose_list = load_array(os.path.join(path, f"pose_{video_name}.pickle"))
         left_hand_list = load_array(os.path.join(path, f"lh_{video_name}.pickle"))
         right_hand_list = load_array(os.path.join(path, f"rh_{video_name}.pickle"))
 
         sign_dictionary = sign_dictionary.append(
             {
                 "name": sign_name,
-                "model": SignModel(pose_list, left_hand_list, right_hand_list),
+                "model": SignModel(left_hand_list, right_hand_list),
                 "distance": 0,
             },
             ignore_index=True,
@@ -76,11 +75,9 @@ if __name__ == "__main__":
             webcam_manager.update(frame, results, sign_detected, is_recording)
 
             pressedKey = cv2.waitKey(1) & 0xFF
-            # Record pressing r
-            if pressedKey == ord("r"):
+            if pressedKey == ord("r"):  # Record pressing r
                 sign_recorder.record()
-            # Break pressing q
-            elif pressedKey == ord("q"):
+            elif pressedKey == ord("q"):  # Break pressing q
                 break
 
         cap.release()

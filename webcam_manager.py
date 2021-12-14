@@ -3,15 +3,14 @@ import numpy as np
 import mediapipe as mp
 
 
-BLUE_COLOR = (245, 242, 226)
+WHITE_COLOR = (245, 242, 226)
 RED_COLOR = (25, 35, 240)
 
 HEIGHT = 600
 
 
 class WebcamManager(object):
-    """
-    Object that displays the Webcam output, draws the landmarks detected and
+    """Object that displays the Webcam output, draws the landmarks detected and
     outputs the sign prediction
     """
 
@@ -37,7 +36,7 @@ class WebcamManager(object):
         frame = self.draw_text(frame)
 
         # Chose circle color
-        color = BLUE_COLOR
+        color = WHITE_COLOR
         if is_recording:
             color = RED_COLOR
 
@@ -79,28 +78,6 @@ class WebcamManager(object):
         mp_holistic = mp.solutions.holistic  # Holistic model
         mp_drawing = mp.solutions.drawing_utils  # Drawing utilities
 
-        pose_connexions = [
-            (11, 12),
-            (11, 13),
-            (12, 14),
-            (13, 15),
-            (14, 16),
-            (11, 23),
-            (12, 24),
-        ]
-
-        # Draw pose connections
-        mp_drawing.draw_landmarks(
-            image,
-            landmark_list=[],
-            connections=pose_connexions,
-            landmark_drawing_spec=mp_drawing.DrawingSpec(
-                color=(235, 52, 86), thickness=2, circle_radius=4
-            ),
-            connection_drawing_spec=mp_drawing.DrawingSpec(
-                color=(52, 235, 103), thickness=2, circle_radius=2
-            ),
-        )
         # Draw left hand connections
         mp_drawing.draw_landmarks(
             image,

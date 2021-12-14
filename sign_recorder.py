@@ -4,7 +4,7 @@ from collections import Counter
 
 from utils.dtw import dtw_distances
 from models.sign_model import SignModel
-from utils.landmark_utils import extract_keypoints
+from utils.landmark_utils import extract_landmarks
 
 
 class SignRecorder(object):
@@ -51,15 +51,14 @@ class SignRecorder(object):
         Updates the distance column of the sign_dictionary
         and resets recording variables
         """
-        pose_list, left_hand_list, right_hand_list = [], [], []
+        left_hand_list, right_hand_list = [], []
         for results in self.recorded_results:
-            pose, left_hand, right_hand = extract_keypoints(results)
-            pose_list.append(pose)
+            _, left_hand, right_hand = extract_landmarks(results)
             left_hand_list.append(left_hand)
             right_hand_list.append(right_hand)
 
         # Create a SignModel object with the landmarks gathered during recording
-        recorded_sign = SignModel(pose_list, left_hand_list, right_hand_list)
+        recorded_sign = SignModel(left_hand_list, right_hand_list)
 
         # Compute sign similarity with DTW (ascending order)
         self.sign_dictionary = dtw_distances(recorded_sign, self.sign_dictionary)

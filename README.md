@@ -1,11 +1,11 @@
 # Sign Language Recognition - using MediaPipe and DTW
 
 This repository proposes an implementation of a Sign Recognition Model using the **MediaPipe** library 
-for keypoint extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
+for landmark extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
 ![Results with a small french language sign dictionary](https://media.giphy.com/media/4xQRRkUOgxox6ltTWs/giphy-downsized-large.gif)
 
-#### Source : https://www.sicara.ai/blog/
+#### Source : https://www.sicara.ai/blog/sign-language-recognition-using-mediapipe
 ___
 
 ## Set up
@@ -17,16 +17,33 @@ ___
 - ` pip install -r requirements.txt `
 
 ### 3. Download or Import Videos of signs which will be considered as reference
-To create a small dataset of French signs run:
+The architecture of the ***videos*** folder must be:
+```
+|data
+    |-videos
+          |-Hello
+            |-<video_of_hello_1>.mp4
+            |-<video_of_hello_2>.mp4
+            ...
+          |-Thanks
+            |-<video_of_thanks_1>.mp4
+            |-<video_of_thanks_2>.mp4
+            ...
+```
 
-- ` python yt_download.py `
+To automatically create a small dataset of French signs:
+
+- Install `ffmpeg`
+- Update ``yt_links.csv`` if needed
+- Run: ` python yt_download.py `
+- Check if the videos downloaded are good quality
 > N.B. The more videos for each sign you import, the better the prediction will be.
 
 ### 4. Run the main file
 
 - ` python main.py `
 
-### 5. Press the "r" key (until the circle turns red) to record the sign. 
+### 5. Press the "r" key to record the sign. 
 
 ___
 ## Code Description
@@ -35,11 +52,6 @@ ___
 
 - The **Hollistic Model** of MediaPipe allows us to extract the keypoints of the Hands, Pose and Face models.
 For now, the implementation only uses the Hand model to predict the sign.
-
-
-- **MediaPipe's Hand model**:
-
-![This is an image](https://google.github.io/mediapipe/images/mobile/hand_landmarks.png)
 
 
 ### *Hand Model*
@@ -66,8 +78,6 @@ all the reference signs present in the dataset.
 ### *Dynamic Time Warping*
 
 -  DTW is widely used for computing **Time Series similarity**.
-
-![This is an image](https://www.researchgate.net/profile/Andrea-Cannata/publication/233751236/figure/fig4/AS:300128591204353@1448567640170/Difference-between-DTW-distance-and-Euclidean-distance-green-lines-represent-mapping.png)
 
 - In this project, we compute the DTW of the variation of hand connexion angles over time.
 
