@@ -33,7 +33,7 @@ The architecture of the ***videos*** folder must be:
 
 To automatically create a small dataset of French signs:
 
-- Install `ffmpeg`
+- Install `ffmpeg` (for MacOS `brew install ffmpeg`)
 - Update ``yt_links.csv`` if needed
 - Run: ` python yt_download.py `
 - Check if the videos downloaded are good quality
