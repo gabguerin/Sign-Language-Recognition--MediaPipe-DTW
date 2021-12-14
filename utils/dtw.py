@@ -4,19 +4,19 @@ import numpy as np
 from models.sign_model import SignModel
 
 
-def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
+def dtw_distances(recorded_sign: SignModel, reference_signs: pd.DataFrame):
     """
     Use DTW to compute similarity between the recorded sign & the reference signs
 
     :param recorded_sign: a SignModel object containing the data gathered during record
-    :param sign_dictionary: A DataFrame of SignModel objects containing the reference signs
+    :param reference_signs: A DataFrame of SignModel objects containing the reference signs
     :return: Return a sign dictionary sorted by the distances from the recorded sign
     """
     # Embeddings of the recorded sign
     rec_left_hand = recorded_sign.lh_embedding
     rec_right_hand = recorded_sign.rh_embedding
 
-    for idx, row in sign_dictionary.iterrows():
+    for idx, row in reference_signs.iterrows():
         # Initialize the row variables
         ref_sign_name, ref_sign_model, _ = row
 
@@ -35,4 +35,4 @@ def dtw_distances(recorded_sign: SignModel, sign_dictionary: pd.DataFrame):
         # If not, distance equals 100000
         else:
             row["distance"] = np.inf
-    return sign_dictionary.sort_values(by=["distance"])
+    return reference_signs.sort_values(by=["distance"])

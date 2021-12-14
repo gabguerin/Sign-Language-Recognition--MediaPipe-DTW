@@ -8,7 +8,7 @@ from utils.landmark_utils import extract_landmarks
 
 
 class SignRecorder(object):
-    def __init__(self, sign_dictionary: pd.DataFrame, seq_len=50):
+    def __init__(self, reference_signs: pd.DataFrame, seq_len=50):
         # Variables for recording
         self.is_recording = False
         self.seq_len = seq_len
@@ -17,13 +17,13 @@ class SignRecorder(object):
         self.recorded_results = []
 
         # DataFrame storing the distances between the recorded sign & all the reference signs from the dataset
-        self.sign_dictionary = sign_dictionary
+        self.reference_signs = reference_signs
 
     def record(self):
         """
         Initialize sign_distances & start recording
         """
-        self.sign_dictionary["distance"].values[:] = 0
+        self.reference_signs["distance"].values[:] = 0
         self.is_recording = True
 
     def process_results(self, results) -> (str, bool):
@@ -39,16 +39,16 @@ class SignRecorder(object):
                 self.recorded_results.append(results)
             else:
                 self.compute_distances()
-                print(self.sign_dictionary)
+                print(self.reference_signs)
 
-        if np.sum(self.sign_dictionary["distance"].values) == 0:
+        if np.sum(self.reference_signs["distance"].values) == 0:
             return "", self.is_recording
 
-        return self._get_sign_predicted(), self.is_recording
+        return self.reference_signs(), self.is_recording
 
     def compute_distances(self):
         """
-        Updates the distance column of the sign_dictionary
+        Updates the distance column of the reference_signs
         and resets recording variables
         """
         left_hand_list, right_hand_list = [], []
@@ -61,7 +61,7 @@ class SignRecorder(object):
         recorded_sign = SignModel(left_hand_list, right_hand_list)
 
         # Compute sign similarity with DTW (ascending order)
-        self.sign_dictionary = dtw_distances(recorded_sign, self.sign_dictionary)
+        self.reference_signs = dtw_distances(recorded_sign, self.reference_signs)
 
         # Reset variables
         self.recorded_results = []
@@ -80,7 +80,7 @@ class SignRecorder(object):
         :return: The name of the predicted sign
         """
         # Get the list (of size batch_size) of the most similar reference signs
-        sign_names = self.sign_dictionary.iloc[:batch_size]["name"].values
+        sign_names = self.reference_signs.iloc[:batch_size]["name"].values
 
         # Count the occurrences of each sign and sort them by descending order
         sign_counter = Counter(sign_names).most_common()

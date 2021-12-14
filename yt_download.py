@@ -3,6 +3,7 @@ from pytube import YouTube
 import os
 from shutil import copyfile
 import pandas as pd
+from tqdm import tqdm
 
 FOLDER = os.path.join("data", "videos")
 
@@ -30,13 +31,15 @@ def download_video(name, video_id, start_time, duration_time):
     else:
         original_video = os.path.join(FOLDER, file_name)
         os.system(
-            f'ffmpeg -ss {start_time} -i "{original_video}" -to {duration_time} -c copy "{output_file}"'
+            f'ffmpeg -hide_banner -loglevel error -ss {start_time} -i "{original_video}" -to {duration_time} -c copy "{output_file}"'
         )
 
 
+print("Downloading videos of signs from YouTube")
+
 # Create the dataset based on yt_links.csv
 df_links = pd.read_csv("yt_links.csv")
-for idx, row in df_links.iterrows():
+for idx, row in tqdm(df_links.iterrows(), total=df_links.shape[0]):
     download_video(*row)
 
 # Delete the videos used to create the clips for the dataset

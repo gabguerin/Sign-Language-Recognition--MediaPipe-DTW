@@ -1,6 +1,8 @@
 fastdtw==0.3.4
 mediapipe==0.8.7.3
+numpy
 opencv-contrib-python==4.5.4.60
 opencv-python==4.5.3.56
 pandas==1.3.2
 pytube==11.0.1
+tdqm==0.0.1
