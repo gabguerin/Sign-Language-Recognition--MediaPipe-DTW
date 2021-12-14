@@ -20,15 +20,13 @@ def download_video(name, video_id, start_time, duration_time):
         .streams.filter(file_extension="mp4")
         .first()
     )
-    file_name = re.sub(r'[.;:,?!]', '', video.title) + ".mp4"
+    file_name = re.sub(r"[.;:,?!]", "", video.title) + ".mp4"
     if not os.path.exists(os.path.join(FOLDER, file_name)):
         video.download(FOLDER)
 
     output_file = os.path.join(file_path, name + "-" + video_id + ".mp4")
     if start_time != start_time and duration_time != duration_time:
-        copyfile(
-            src=os.path.join(FOLDER, file_name), dst=output_file
-        )
+        copyfile(src=os.path.join(FOLDER, file_name), dst=output_file)
     else:
         original_video = os.path.join(FOLDER, file_name)
         os.system(

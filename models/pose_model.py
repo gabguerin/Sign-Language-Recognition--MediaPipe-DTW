@@ -11,7 +11,7 @@ class PoseModel(object):
         ]
 
         # Reshape landmarks
-        landmarks = np.array(landmarks).reshape((33,3))
+        landmarks = np.array(landmarks).reshape((33, 3))
 
         self.left_arm_landmarks = self._normalize_landmarks(
             [landmarks[lmk_idx] for lmk_idx in [11, 13, 15]]
@@ -20,9 +20,12 @@ class PoseModel(object):
             [landmarks[lmk_idx] for lmk_idx in [12, 14, 16]]
         )
 
-        self.left_arm_embedding = self.left_arm_landmarks[self.landmark_names.index("wrist")].tolist()
-        self.right_arm_embedding = self.right_arm_landmarks[self.landmark_names.index("wrist")].tolist()
-
+        self.left_arm_embedding = self.left_arm_landmarks[
+            self.landmark_names.index("wrist")
+        ].tolist()
+        self.right_arm_embedding = self.right_arm_landmarks[
+            self.landmark_names.index("wrist")
+        ].tolist()
 
     def _normalize_landmarks(self, landmarks):
         """
