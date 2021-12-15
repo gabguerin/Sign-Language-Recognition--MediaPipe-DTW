@@ -25,7 +25,7 @@ def load_dataset():
     videos_not_in_dataset = list(set(videos).difference(set(dataset)))
     n = len(videos_not_in_dataset)
     if n > 0:
-        print(f"Extracting landmarks from new videos: {n} videos detected\n")
+        print(f"\nExtracting landmarks from new videos: {n} videos detected\n")
 
         for video_name in tdqm(range(n)):
             save_landmarks_from_video(video_name)

@@ -44,7 +44,7 @@ class SignRecorder(object):
         if np.sum(self.reference_signs["distance"].values) == 0:
             return "", self.is_recording
 
-        return self.reference_signs(), self.is_recording
+        return self.reference_signs, self.is_recording
 
     def compute_distances(self):
         """
