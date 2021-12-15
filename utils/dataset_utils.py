@@ -1,7 +1,7 @@
 import os
 
 import pandas as pd
-from tdqm import tdqm
+from tqdm import tqdm
 
 from models.sign_model import SignModel
 from utils.landmark_utils import save_landmarks_from_video, load_array
@@ -27,8 +27,8 @@ def load_dataset():
     if n > 0:
         print(f"\nExtracting landmarks from new videos: {n} videos detected\n")
 
-        for video_name in tdqm(range(n)):
-            save_landmarks_from_video(video_name)
+        for idx in tqdm(range(n)):
+            save_landmarks_from_video(videos_not_in_dataset[idx])
 
     return videos
 
@@ -51,6 +51,6 @@ def load_reference_signs(videos):
             ignore_index=True,
         )
     print(
-        f'Dictionary count: {reference_signs.drop["sign_model"].groupby(["name"]).count()}'
+        f'Dictionary count: {reference_signs[["name", "sign_model"]].groupby(["name"]).count()}'
     )
     return reference_signs

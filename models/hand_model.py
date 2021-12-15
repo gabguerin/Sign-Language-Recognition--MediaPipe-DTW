@@ -67,6 +67,8 @@ class HandModel(object):
         Return
             Angle between the two vectors
         """
+        if np.array_equal(u, v):
+            return 0
         dot_product = np.dot(u, v)
         norm = np.linalg.norm(u) * np.linalg.norm(v)
         return np.arccos(dot_product / norm)
