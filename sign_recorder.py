@@ -44,7 +44,7 @@ class SignRecorder(object):
         if np.sum(self.reference_signs["distance"].values) == 0:
             return "", self.is_recording
 
-        return self.reference_signs, self.is_recording
+        return self._get_sign_predicted(), self.is_recording
 
     def compute_distances(self):
         """
@@ -67,7 +67,7 @@ class SignRecorder(object):
         self.recorded_results = []
         self.is_recording = False
 
-    def _get_sign_predicted(self, batch_size=3, threshold=1):
+    def _get_sign_predicted(self, batch_size=5, threshold=0.5):
         """
         Method that outputs the sign that appears the most in the list of closest
         reference signs, only if its proportion within the batch is greater than the threshold
