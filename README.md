@@ -17,15 +17,15 @@ ___
 - ` pip install -r requirements.txt `
 
 ### 3. Download or Import Videos of signs which will be considered as reference
-The architecture of the ***videos*** folder must be:
+The architecture of the `videos/` folder must be:
 ```
-|data
-    |-videos
-          |-Hello
+|data/
+    |-videos/
+          |-Hello/
             |-<video_of_hello_1>.mp4
             |-<video_of_hello_2>.mp4
             ...
-          |-Thanks
+          |-Thanks/
             |-<video_of_thanks_1>.mp4
             |-<video_of_thanks_2>.mp4
             ...
@@ -34,9 +34,8 @@ The architecture of the ***videos*** folder must be:
 To automatically create a small dataset of French signs:
 
 - Install `ffmpeg` (for MacOS `brew install ffmpeg`)
-- Update ``yt_links.csv`` if needed
 - Run: ` python yt_download.py `
-- Check if the videos downloaded are good quality
+- Add more YouTube links in ``yt_links.csv`` if needed
 > N.B. The more videos for each sign you import, the better the prediction will be.
 
 ### 4. Run the main file
@@ -50,7 +49,7 @@ ___
 
 ### *Landmark extraction (MediaPipe)*
 
-- The **Hollistic Model** of MediaPipe allows us to extract the keypoints of the Hands, Pose and Face models.
+- The **Holistic Model** of MediaPipe allows us to extract the keypoints of the Hands, Pose and Face models.
 For now, the implementation only uses the Hand model to predict the sign.
 
 
