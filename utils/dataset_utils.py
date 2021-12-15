@@ -1,7 +1,7 @@
 import os
 
 import pandas as pd
-from tdqm import tdqm
+from tqdm import tqdm
 
 from models.sign_model import SignModel
 from utils.landmark_utils import save_landmarks_from_video, load_array
@@ -25,9 +25,9 @@ def load_dataset():
     videos_not_in_dataset = list(set(videos).difference(set(dataset)))
     n = len(videos_not_in_dataset)
     if n > 0:
-        print(f"Extracting landmarks from new videos: {n} videos detected\n")
+        print(f"\nExtracting landmarks from new videos: {n} videos detected\n")
 
-        for video_name in tdqm(range(n)):
+        for video_name in tqdm(range(n)):
             save_landmarks_from_video(video_name)
 
     return videos
