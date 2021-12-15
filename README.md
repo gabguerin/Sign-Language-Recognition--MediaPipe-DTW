@@ -16,7 +16,7 @@ ___
 
 - ` pip install -r requirements.txt `
 
-### 3. Download or Import Videos of signs which will be considered as reference
+### 3. Import Videos of signs which will be considered as reference
 The architecture of the `videos/` folder must be:
 ```
 |data/
@@ -36,9 +36,9 @@ To automatically create a small dataset of French signs:
 - Install `ffmpeg` (for MacOS `brew install ffmpeg`)
 - Run: ` python yt_download.py `
 - Add more YouTube links in ``yt_links.csv`` if needed
-> N.B. The more videos for each sign you import, the better the prediction will be.
+> N.B. The current dataset is insufficient to obtain good results. Try adding more links or importing your own videos 
 
-### 4. Run the main file
+### 4. Load the dataset and turn on the Webcam
 
 - ` python main.py `
 
