@@ -22,7 +22,7 @@ class HandModel(object):
         landmarks = np.array(landmarks).reshape((21, 3))
         self.feature_vector = self._get_feature_vector(landmarks)
 
-    def _get_feature_vector(self, landmarks: np.ndarray) -> List[int]:
+    def _get_feature_vector(self, landmarks: np.ndarray) -> List[float]:
         """
         Params
             landmarks: numpy array of shape (21, 3)

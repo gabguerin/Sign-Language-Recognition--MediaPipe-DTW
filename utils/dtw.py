@@ -9,7 +9,10 @@ def dtw_distances(recorded_sign: SignModel, reference_signs: pd.DataFrame):
     Use DTW to compute similarity between the recorded sign & the reference signs
 
     :param recorded_sign: a SignModel object containing the data gathered during record
-    :param reference_signs: A DataFrame of SignModel objects containing the reference signs
+    :param reference_signs: pd.DataFrame
+                            columns : name, dtype: str
+                                      sign_model, dtype: SignModel
+                                      distance, dtype: float64
     :return: Return a sign dictionary sorted by the distances from the recorded sign
     """
     # Embeddings of the recorded sign
@@ -32,7 +35,7 @@ def dtw_distances(recorded_sign: SignModel, reference_signs: pd.DataFrame):
             if recorded_sign.has_right_hand:
                 row["distance"] += list(fastdtw(rec_right_hand, ref_right_hand))[0]
 
-        # If not, distance equals 100000
+        # If not, distance equals infinity
         else:
             row["distance"] = np.inf
     return reference_signs.sort_values(by=["distance"])
