@@ -3,8 +3,6 @@
 This repository proposes an implementation of a Sign Recognition Model using the **MediaPipe** library 
 for landmark extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
-![Results with a small french language sign dictionary](https://media.giphy.com/media/4xQRRkUOgxox6ltTWs/giphy-downsized-large.gif)
-
 #### Source : https://www.sicara.ai/blog/sign-language-recognition-using-mediapipe
 ___
 
@@ -36,7 +34,7 @@ To automatically create a small dataset of French signs:
 - Install `ffmpeg` (for MacOS `brew install ffmpeg`)
 - Run: ` python yt_download.py `
 - Add more YouTube links in ``yt_links.csv`` if needed
-> N.B. The current dataset is insufficient to obtain good results. Try adding more links or importing your own videos 
+> N.B. The current dataset is insufficient to obtain good results. Feel free to add more links or import your own videos 
 
 ### 4. Load the dataset and turn on the Webcam
 
