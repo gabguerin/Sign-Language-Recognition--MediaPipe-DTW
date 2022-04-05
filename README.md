@@ -3,6 +3,8 @@
 This repository proposes an implementation of a Sign Recognition Model using the **MediaPipe** library 
 for landmark extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
+![](example.gif)
+
 #### Source : https://www.sicara.ai/blog/sign-language-recognition-using-mediapipe
 ___
 
