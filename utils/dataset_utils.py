@@ -34,7 +34,7 @@ def load_dataset():
 
 
 def load_reference_signs(videos):
-    reference_signs = pd.DataFrame(columns=["name", "sign_model", "distance"])
+    reference_signs = {"name": [], "sign_model": [], "distance": []}
     for video_name in videos:
         sign_name = video_name.split("-")[0]
         path = os.path.join("data", "dataset", sign_name, video_name)
@@ -42,14 +42,11 @@ def load_reference_signs(videos):
         left_hand_list = load_array(os.path.join(path, f"lh_{video_name}.pickle"))
         right_hand_list = load_array(os.path.join(path, f"rh_{video_name}.pickle"))
 
-        reference_signs = reference_signs.append(
-            {
-                "name": sign_name,
-                "sign_model": SignModel(left_hand_list, right_hand_list),
-                "distance": 0,
-            },
-            ignore_index=True,
-        )
+        reference_signs["name"].append(sign_name)
+        reference_signs["sign_model"].append(SignModel(left_hand_list, right_hand_list))
+        reference_signs["distance"].append(0)
+    
+    reference_signs = pd.DataFrame(reference_signs, dtype=object)
     print(
         f'Dictionary count: {reference_signs[["name", "sign_model"]].groupby(["name"]).count()}'
     )
