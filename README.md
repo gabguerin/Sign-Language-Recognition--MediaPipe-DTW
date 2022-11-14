@@ -1,5 +1,7 @@
 # Sign Language Recognition - using MediaPipe and DTW
 
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
 This repository proposes an implementation of a Sign Recognition Model using the **MediaPipe** library 
 for landmark extraction and **Dynamic Time Warping** (DTW) as a similarity metric between signs.
 
