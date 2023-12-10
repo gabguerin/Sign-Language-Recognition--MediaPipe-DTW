@@ -21,7 +21,7 @@ if __name__ == "__main__":
     webcam_manager = WebcamManager()
 
     # Turn on the webcam
-    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture(0)
     # Set up the Mediapipe environment
     with mediapipe.solutions.holistic.Holistic(
         min_detection_confidence=0.5, min_tracking_confidence=0.5
