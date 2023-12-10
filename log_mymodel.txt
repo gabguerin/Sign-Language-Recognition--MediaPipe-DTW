@@ -1,0 +1,1117 @@
+New log
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    931.692527
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3033.859322
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3353.167571
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3566.791914
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3764.423563
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3983.985746
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5408.342803
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6302.046138
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8992.425521
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11100.750161
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11811.530522
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1098.156939
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2726.897746
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3394.107175
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3498.960891
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3656.628729
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3686.311791
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5144.388975
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6382.948661
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8763.489036
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11810.516974
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12635.106037
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model     distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1038.32426
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  3166.664733
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3269.324186
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3421.235886
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3806.351478
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  4155.710974
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  5481.741506
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  6236.949373
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  8608.226854
+2               Non  <models.sign_model.SignModel object at 0x7f114...   8859.04545
+1               Non  <models.sign_model.SignModel object at 0x7f118...  9707.918051
+0               Non  <models.sign_model.SignModel object at 0x7f118...          inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1027.051662
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2975.499657
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3095.791758
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...    3604.80157
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3619.756219
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3957.836669
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5230.995707
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6205.950067
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8601.841631
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11900.786377
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12610.787994
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1409.096298
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3133.775663
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3324.291138
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3625.984118
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3626.210351
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4404.180593
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5357.894164
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6312.361681
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8990.559447
+2               Non  <models.sign_model.SignModel object at 0x7f114...   9028.733436
+1               Non  <models.sign_model.SignModel object at 0x7f118...  10077.908198
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    1252.83283
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2788.779443
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3490.654394
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3628.774223
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...    3705.73937
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3874.002162
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5195.168671
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6446.276138
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8883.074266
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11810.048621
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12607.102852
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1010.687864
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2612.717093
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3403.833151
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3544.814402
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3570.221281
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3798.583699
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   4925.561878
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6445.793725
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8882.596946
+2               Non  <models.sign_model.SignModel object at 0x7f114...   11263.75868
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11732.400241
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model     distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  1935.653028
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  2967.831542
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3583.288945
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3705.22096
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  4429.529793
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  4447.453206
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  5452.783473
+2               Non  <models.sign_model.SignModel object at 0x7f114...  6010.487863
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  6770.772932
+1               Non  <models.sign_model.SignModel object at 0x7f118...  8958.882343
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  9377.746341
+0               Non  <models.sign_model.SignModel object at 0x7f118...          inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+Bonjour
+               name                                         sign_model     distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  1268.910911
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  3134.379889
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3604.41704
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3637.957652
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  3767.928616
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  4239.534736
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  5399.742836
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  6188.868012
+2               Non  <models.sign_model.SignModel object at 0x7f114...  6993.618721
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  8873.677081
+1               Non  <models.sign_model.SignModel object at 0x7f118...  9592.721285
+0               Non  <models.sign_model.SignModel object at 0x7f118...          inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    907.524043
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2984.422014
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3075.432644
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3460.193476
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3517.984006
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4108.359731
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5055.404409
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6110.358384
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8609.147905
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11739.376396
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12413.932806
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+Bonjour
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  14891.184771
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  15176.169367
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  17181.060426
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  18952.987409
+0               Non  <models.sign_model.SignModel object at 0x7f118...  20550.088348
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  11061.005566
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...   16154.13561
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  17385.933017
+0               Non  <models.sign_model.SignModel object at 0x7f118...  18340.136843
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  20047.570382
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12194.142276
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  15407.973823
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  18375.374167
+0               Non  <models.sign_model.SignModel object at 0x7f118...  18776.445942
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  20575.579094
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12923.886405
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  17346.370269
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  18968.115346
+0               Non  <models.sign_model.SignModel object at 0x7f118...  21167.813743
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  21691.284449
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...   11486.03667
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...   17302.04845
+0               Non  <models.sign_model.SignModel object at 0x7f118...  17935.758302
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  19180.287029
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  21289.162933
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12125.832227
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  17839.463729
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  18353.697342
+0               Non  <models.sign_model.SignModel object at 0x7f118...  20034.424144
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  21535.110816
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12986.847877
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...    16976.4569
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  18682.885123
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  21115.977671
+0               Non  <models.sign_model.SignModel object at 0x7f118...  22285.146565
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  13230.254501
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  17670.949237
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  19794.567625
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  21487.954126
+0               Non  <models.sign_model.SignModel object at 0x7f118...  22261.413915
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12916.659709
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  16106.055333
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...   18152.28677
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  19313.120787
+0               Non  <models.sign_model.SignModel object at 0x7f118...  23614.406797
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  12458.895486
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  16359.059442
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  17762.068853
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  19530.942768
+0               Non  <models.sign_model.SignModel object at 0x7f118...  21648.083011
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   4446.285901
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5270.182948
+1               Non  <models.sign_model.SignModel object at 0x7f118...   5537.980242
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5933.783094
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   9949.195975
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  10108.791719
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10708.254121
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  11515.027016
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   13672.36227
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15111.569971
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  16712.381393
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   5367.886189
+1               Non  <models.sign_model.SignModel object at 0x7f118...   5568.497879
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6057.787682
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7548.193466
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   9858.254317
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   9958.850835
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   10762.15791
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   11581.60227
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  13487.074104
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15104.890797
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  16240.958221
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+1               Non  <models.sign_model.SignModel object at 0x7f118...   6077.393602
+2               Non  <models.sign_model.SignModel object at 0x7f114...   6135.740204
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7687.648033
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10219.480308
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  10253.634392
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  10486.368452
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  11342.431107
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  12138.422628
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  14211.067571
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  16060.092753
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17742.723612
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   6041.155173
+1               Non  <models.sign_model.SignModel object at 0x7f118...   6279.424676
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6328.459286
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8562.499089
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   9660.102918
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   9718.162924
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   10796.01941
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  11857.394974
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  13834.651259
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15097.604566
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  16814.781268
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   5823.482307
+1               Non  <models.sign_model.SignModel object at 0x7f118...   5863.903542
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7252.699583
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9442.639267
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  10084.899612
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  10282.358526
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  11242.068592
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  11961.772724
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  13864.401391
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15561.315107
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  16946.896523
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   6858.189545
+1               Non  <models.sign_model.SignModel object at 0x7f118...   7437.057708
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10962.968299
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  13634.808916
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  13948.101538
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  14421.286771
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  15316.839099
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   15826.42754
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  16406.492591
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  17270.392771
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17868.126707
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...    5899.45127
+1               Non  <models.sign_model.SignModel object at 0x7f118...   7405.287133
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  11123.092009
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  13382.898151
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  13456.977352
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   14673.02159
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  14748.005821
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15127.365123
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  15330.064434
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  16426.298809
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17590.532589
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   6014.365248
+1               Non  <models.sign_model.SignModel object at 0x7f118...   6887.447249
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10670.502748
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  13242.018957
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  13411.726236
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  14492.904384
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   14712.66381
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15244.548858
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  15613.989002
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  16511.917948
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17657.989954
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+2               Non  <models.sign_model.SignModel object at 0x7f114...   5449.019781
+1               Non  <models.sign_model.SignModel object at 0x7f118...   6860.851557
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10339.306779
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   12848.60911
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   12853.47003
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  14124.839511
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  14403.785558
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   14536.72294
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  14591.305218
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  16026.763685
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17269.790502
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+1               Non  <models.sign_model.SignModel object at 0x7f118...   5970.567301
+2               Non  <models.sign_model.SignModel object at 0x7f114...   7112.805495
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10929.871994
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  13122.981197
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  13462.649281
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  14022.838519
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  14772.621133
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  15489.515185
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  15705.226114
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  16763.182223
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  17339.635233
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Sign not found
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4321.283013
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   5019.365757
+7               Oui  <models.sign_model.SignModel object at 0x7f114...    5224.70408
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5399.044198
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5835.797526
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   6055.807474
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   6302.470964
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7229.012251
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   7874.761005
+1               Non  <models.sign_model.SignModel object at 0x7f118...  10549.503988
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11267.445465
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   4887.719885
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5065.158333
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...     5267.1506
+7               Oui  <models.sign_model.SignModel object at 0x7f114...    5485.95761
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6807.889329
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   7110.448587
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7122.359961
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9271.001033
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9374.699083
+1               Non  <models.sign_model.SignModel object at 0x7f118...   9994.567505
+2               Non  <models.sign_model.SignModel object at 0x7f114...  10594.527368
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5164.151608
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   5616.348174
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5780.987842
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6113.996851
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6355.854477
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   6891.803171
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7137.097889
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9201.765484
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9364.758796
+1               Non  <models.sign_model.SignModel object at 0x7f118...  10510.601835
+2               Non  <models.sign_model.SignModel object at 0x7f114...  10890.443092
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   6908.709048
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7143.690034
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7264.910797
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7532.523655
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8219.196615
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    8227.06424
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9388.088898
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9984.674136
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10077.530425
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11001.273972
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12273.513989
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7404.516498
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7450.747499
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7569.763806
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8373.318383
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8379.270115
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8515.804557
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9549.262854
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9562.250489
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10063.410842
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11916.925523
+2               Non  <models.sign_model.SignModel object at 0x7f114...  13382.386668
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   8102.403934
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   8121.450516
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8562.913851
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8843.383091
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9028.772775
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9372.136776
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9747.455645
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10034.910143
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10588.775007
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12650.096828
+2               Non  <models.sign_model.SignModel object at 0x7f114...  14218.595421
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6768.994091
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7038.402355
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7175.407493
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7989.217137
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8037.693739
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...    8107.22417
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   8947.983546
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9415.847274
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9458.433908
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11355.494503
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12651.261878
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7929.523079
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   8066.862801
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8389.685097
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8390.846645
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8707.862557
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9065.210548
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9179.986445
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9568.580052
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10040.679221
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12720.541569
+2               Non  <models.sign_model.SignModel object at 0x7f114...  13882.739031
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6279.954504
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6578.933252
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6820.513099
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...    6857.79375
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...    7358.28958
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   7518.787149
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7855.968339
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8049.702806
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   8941.750575
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11937.744029
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12421.823866
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   8046.937391
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   8070.124545
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8373.408574
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8962.334609
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8986.684562
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    9007.40021
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9648.405009
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10023.712912
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10336.769013
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12388.326679
+2               Non  <models.sign_model.SignModel object at 0x7f114...  13296.188279
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7546.438671
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7619.867536
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7930.483278
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9388.174441
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9725.507401
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9782.168112
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9997.334845
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10199.719652
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10377.594787
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13584.618546
+2               Non  <models.sign_model.SignModel object at 0x7f114...  14639.671786
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6998.628783
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7521.285283
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7589.772436
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8491.727418
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8886.218264
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9139.996071
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   9726.174031
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10180.328004
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10721.560854
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11302.077539
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12485.980583
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   8475.022866
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   8738.768448
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   8896.131019
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9089.819683
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9728.556375
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10048.277797
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10796.411662
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   10924.61848
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  10926.322665
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12345.519775
+2               Non  <models.sign_model.SignModel object at 0x7f114...  13387.795423
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+9               Oui  <models.sign_model.SignModel object at 0x7f116...    7311.60655
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7818.946872
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7854.676472
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8489.347894
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   8757.089976
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   9182.834051
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...    9912.24647
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  10134.515534
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   10973.40209
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11367.758598
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12702.765142
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Oui
+               name                                         sign_model      distance
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4906.322039
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4918.886813
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5483.382413
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5583.382938
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   6047.496347
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...    7728.52041
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   8624.300213
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   9054.514779
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  10227.495649
+2               Non  <models.sign_model.SignModel object at 0x7f114...  13650.107194
+1               Non  <models.sign_model.SignModel object at 0x7f118...  14095.216909
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    3710.45293
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3828.666732
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4140.651828
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4353.451022
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5429.979106
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5937.127847
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7089.903977
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7328.104513
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   10242.03636
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12833.192152
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13048.808302
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...    1389.65511
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2731.831849
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3712.226713
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...    3770.56864
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3857.331827
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4208.638872
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5225.579704
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   5824.607961
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   7917.278363
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11856.854886
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12723.840955
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1729.457805
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2584.237724
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3208.023799
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3915.479578
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3943.310374
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4074.737359
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5944.231737
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6712.144559
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9477.354966
+2               Non  <models.sign_model.SignModel object at 0x7f114...  10949.659295
+1               Non  <models.sign_model.SignModel object at 0x7f118...  11864.652644
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   2805.689851
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3218.824503
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3860.570771
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4108.888449
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4667.253092
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5079.542935
+7               Oui  <models.sign_model.SignModel object at 0x7f114...    6452.50738
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7051.647464
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9746.471953
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12484.009384
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12926.424553
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3525.903603
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3710.981335
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4149.287191
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4255.420313
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5217.173904
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5434.766853
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6441.198713
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7151.033721
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9457.823741
+2               Non  <models.sign_model.SignModel object at 0x7f114...   12373.49816
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12696.738123
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3028.975577
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...    3072.30863
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3535.907058
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4069.074585
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4531.193096
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5022.400179
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6154.568146
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6856.165411
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9359.367422
+2               Non  <models.sign_model.SignModel object at 0x7f114...   12265.38198
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13110.911214
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model     distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   2744.99856
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  3010.913769
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...  3400.410588
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...  4128.224171
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...  4403.586452
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4880.22861
+7               Oui  <models.sign_model.SignModel object at 0x7f114...  6332.645153
+9               Oui  <models.sign_model.SignModel object at 0x7f116...  6865.754441
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  9140.479369
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12379.30275
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13307.93807
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...          inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...          inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   2339.424711
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3286.519506
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3558.143244
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4147.486918
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4275.340392
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...     4759.9541
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6351.768249
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6807.407859
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9694.741026
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12575.367868
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13017.569144
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4259.632201
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4371.854793
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4622.245805
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4982.661786
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...    5101.26867
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   7131.051956
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   7769.719824
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   8150.875044
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9712.586272
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12823.134554
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13118.007993
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   2436.185195
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3314.610523
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3823.907285
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...    4001.75359
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4222.169265
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4459.409771
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6412.528476
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6893.179573
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9495.290606
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12324.946777
+1               Non  <models.sign_model.SignModel object at 0x7f118...  13049.547347
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3304.464608
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3399.924813
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3968.032428
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4343.214747
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4801.339411
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5562.371015
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6528.946207
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7342.519822
+8               Oui  <models.sign_model.SignModel object at 0x7f114...    9842.39158
+2               Non  <models.sign_model.SignModel object at 0x7f114...  10431.055429
+1               Non  <models.sign_model.SignModel object at 0x7f118...  10834.866407
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3230.697522
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3291.401553
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4317.544734
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4453.810944
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4617.152988
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5347.390049
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6629.394059
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7350.331983
+8               Oui  <models.sign_model.SignModel object at 0x7f114...  10012.427042
+2               Non  <models.sign_model.SignModel object at 0x7f114...  11203.510028
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12096.892966
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1958.248026
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3170.926026
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3888.512295
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3914.783517
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4246.770989
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4379.851842
+7               Oui  <models.sign_model.SignModel object at 0x7f114...    6525.32472
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6888.747816
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9615.679938
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12407.897025
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12943.187955
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3472.558777
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3805.563265
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4143.274301
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4290.809218
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4857.767776
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5569.072696
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6613.516221
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7139.143663
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9337.854585
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12254.209925
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12381.724705
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3323.539137
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...    3859.73039
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...    4270.69113
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   4412.508394
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5139.486484
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   5710.486396
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   6738.220448
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   7207.018087
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9667.890224
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12007.361736
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12058.777742
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...   1000.547014
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   2556.914195
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...   3225.254241
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3696.247102
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...   3720.089145
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...   4488.618037
+7               Oui  <models.sign_model.SignModel object at 0x7f114...   5487.046159
+9               Oui  <models.sign_model.SignModel object at 0x7f116...   6609.984147
+8               Oui  <models.sign_model.SignModel object at 0x7f114...   9339.863428
+2               Non  <models.sign_model.SignModel object at 0x7f114...  12234.956151
+1               Non  <models.sign_model.SignModel object at 0x7f118...  12975.216039
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...           inf
+0               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Bonjour
+               name                                         sign_model      distance
+0               Non  <models.sign_model.SignModel object at 0x7f118...   9528.934084
+13            Ça va  <models.sign_model.SignModel object at 0x7f116...  21884.967625
+12            Ça va  <models.sign_model.SignModel object at 0x7f116...  26029.274734
+14            Ça va  <models.sign_model.SignModel object at 0x7f116...  37793.092455
+15            Ça va  <models.sign_model.SignModel object at 0x7f116...  43573.409676
+3           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7f114...           inf
+6           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+5           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+4           Bonjour  <models.sign_model.SignModel object at 0x7f114...           inf
+7               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+9               Oui  <models.sign_model.SignModel object at 0x7f116...           inf
+8               Oui  <models.sign_model.SignModel object at 0x7f114...           inf
+2               Non  <models.sign_model.SignModel object at 0x7f114...           inf
+1               Non  <models.sign_model.SignModel object at 0x7f118...           inf
+Ça va

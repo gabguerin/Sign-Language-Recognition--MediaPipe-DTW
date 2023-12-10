@@ -21,7 +21,12 @@ def extract_landmarks(results):
     :param results: mediapipe object that contains the 3D position of all keypoints
     :return: Two np arrays of size (1, 21 * 3) = (1, nb_keypoints * nb_coordinates) corresponding to both hands
     """
+
+    
     pose = landmark_to_array(results.pose_landmarks).reshape(99).tolist()
+    pose = pose[:45]
+
+        
 
     left_hand = np.zeros(63).tolist()
     if results.left_hand_landmarks:
@@ -54,9 +59,11 @@ def save_landmarks_from_video(video_name):
 
                 # Store results
                 pose, left_hand, right_hand = extract_landmarks(results)
+                
                 landmark_list["pose"].append(pose)
                 landmark_list["left_hand"].append(left_hand)
                 landmark_list["right_hand"].append(right_hand)
+                
             else:
                 break
         cap.release()
@@ -83,6 +90,65 @@ def save_landmarks_from_video(video_name):
     )
 
 
+def save_array(arr, path):
+    file = open(path, "wb")
+    pkl.dump(arr, file)
+    file.close()
+
+
+def load_array(path):
+    file = open(path, "rb")
+    arr = pkl.load(file)
+    file.close()
+    return np.array(arr)
+
+
+def save_landmarks_from_test_video(video_name):
+    landmark_list = {"pose": [], "left_hand": [], "right_hand": []}
+    sign_name = video_name.split("-")[0]
+
+    # Set the Video stream
+    cap = cv2.VideoCapture(
+        os.path.join("data", "test_videos", sign_name, video_name + ".mp4")
+    )
+    with mp.solutions.holistic.Holistic(
+        min_detection_confidence=0.5, min_tracking_confidence=0.5
+    ) as holistic:
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if ret:
+                # Make detections
+                image, results = mediapipe_detection(frame, holistic)
+
+                # Store results
+                pose, left_hand, right_hand = extract_landmarks(results)
+                landmark_list["pose"].append(pose)
+                landmark_list["left_hand"].append(left_hand)
+                landmark_list["right_hand"].append(right_hand)
+            else:
+                break
+        cap.release()
+
+    # Create the folder of the sign if it doesn't exists
+    path = os.path.join("data", "test_dataset", sign_name)
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+    # Create the folder of the video data if it doesn't exists
+    data_path = os.path.join(path, video_name)
+    if not os.path.exists(data_path):
+        os.mkdir(data_path)
+
+    # Saving the landmark_list in the correct folder
+    save_array(
+        landmark_list["pose"], os.path.join(data_path, f"pose_{video_name}.pickle")
+    )
+    save_array(
+        landmark_list["left_hand"], os.path.join(data_path, f"lh_{video_name}.pickle")
+    )
+    save_array(
+        landmark_list["right_hand"], os.path.join(data_path, f"rh_{video_name}.pickle")
+    )
 def save_array(arr, path):
     file = open(path, "wb")
     pkl.dump(arr, file)

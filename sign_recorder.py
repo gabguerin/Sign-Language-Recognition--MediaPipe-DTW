@@ -2,12 +2,13 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 
-from utils.dtw import dtw_distances
+from utils.dtw import dtw_distances, soft_dtw_distances
 from models.sign_model import SignModel
 from utils.landmark_utils import extract_landmarks
 
 
 class SignRecorder(object):
+    
     def __init__(self, reference_signs: pd.DataFrame, seq_len=50):
         # Variables for recording
         self.is_recording = False
@@ -40,7 +41,9 @@ class SignRecorder(object):
             else:
                 self.compute_distances()
                 print(self.reference_signs)
-
+                with open('log.txt', 'a') as file:
+                    file.write(str(self.reference_signs))
+                    file.write("\n")
         if np.sum(self.reference_signs["distance"].values) == 0:
             return "", self.is_recording
         return self._get_sign_predicted(), self.is_recording
@@ -50,17 +53,20 @@ class SignRecorder(object):
         Updates the distance column of the reference_signs
         and resets recording variables
         """
-        left_hand_list, right_hand_list = [], []
+        pose_list, left_hand_list, right_hand_list = [], [], []
         for results in self.recorded_results:
-            _, left_hand, right_hand = extract_landmarks(results)
+            pose, left_hand, right_hand = extract_landmarks(results)
             left_hand_list.append(left_hand)
             right_hand_list.append(right_hand)
+            pose_list.append(pose)
 
         # Create a SignModel object with the landmarks gathered during recording
-        recorded_sign = SignModel(left_hand_list, right_hand_list)
-
+        recorded_sign = SignModel(left_hand_list, right_hand_list, pose_list)
+        # if True:
+        #     raise ValueError(len(right_hand_list))
         # Compute sign similarity with DTW (ascending order)
         self.reference_signs = dtw_distances(recorded_sign, self.reference_signs)
+        # self.reference_signs = soft_dtw_distances(recorded_sign, self.reference_signs)
 
         # Reset variables
         self.recorded_results = []
@@ -85,6 +91,7 @@ class SignRecorder(object):
         sign_counter = Counter(sign_names).most_common()
 
         predicted_sign, count = sign_counter[0]
+        
         if count / batch_size < threshold:
-            return "Signe inconnu"
+            return "Sign not found"
         return predicted_sign

@@ -1,0 +1,19 @@
+New log
+               name                                         sign_model      distance
+3           Bonjour  <models.sign_model.SignModel object at 0x7fa4b...   1529.806475
+11  S'il vous plaît  <models.sign_model.SignModel object at 0x7fa4d...    3211.32914
+6           Bonjour  <models.sign_model.SignModel object at 0x7fa4b...     3291.6765
+4           Bonjour  <models.sign_model.SignModel object at 0x7fa4b...   3656.084849
+5           Bonjour  <models.sign_model.SignModel object at 0x7fa4b...   3698.116669
+10  S'il vous plaît  <models.sign_model.SignModel object at 0x7fa4b...   3823.379873
+7               Oui  <models.sign_model.SignModel object at 0x7fa4b...   5101.114044
+9               Oui  <models.sign_model.SignModel object at 0x7fa4b...   5924.427298
+8               Oui  <models.sign_model.SignModel object at 0x7fa4b...   8141.764003
+2               Non  <models.sign_model.SignModel object at 0x7fa4b...  11578.995795
+1               Non  <models.sign_model.SignModel object at 0x7fa4f...   12050.52902
+0               Non  <models.sign_model.SignModel object at 0x7fa4f...           inf
+12            Ça va  <models.sign_model.SignModel object at 0x7fa4d...           inf
+13            Ça va  <models.sign_model.SignModel object at 0x7fa4d...           inf
+14            Ça va  <models.sign_model.SignModel object at 0x7fa4d...           inf
+15            Ça va  <models.sign_model.SignModel object at 0x7fa4d...           inf
+Bonjour
