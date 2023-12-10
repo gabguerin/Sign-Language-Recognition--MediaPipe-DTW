@@ -7,10 +7,10 @@ from models.sign_model import SignModel
 from utils.landmark_utils import extract_landmarks
 
 
-class SignRecorder(object):
+class TestSignRecorder(object):
     def __init__(self, reference_signs: pd.DataFrame, seq_len=50):
         # Variables for recording
-        self.is_recording = False
+        self.is_recording = True
         self.seq_len = seq_len
 
         # List of results stored each frame

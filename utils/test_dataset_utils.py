@@ -4,19 +4,19 @@ import pandas as pd
 from tqdm import tqdm
 
 from models.sign_model import SignModel
-from utils.landmark_utils import save_landmarks_from_video, load_array 
+from utils.landmark_utils import save_landmarks_from_video, load_array, save_landmarks_from_test_video
 
 
-def load_dataset():
+def load_test_dataset():
     videos = [
         file_name.replace(".mp4", "")
-        for root, dirs, files in os.walk(os.path.join("data", "videos"))
+        for root, dirs, files in os.walk(os.path.join("data", "test_videos"))
         for file_name in files
         if file_name.endswith(".mp4")
     ]
     dataset = [
         file_name.replace(".pickle", "").replace("pose_", "")
-        for root, dirs, files in os.walk(os.path.join("data", "dataset"))
+        for root, dirs, files in os.walk(os.path.join("data", "test_dataset"))
         for file_name in files
         if file_name.endswith(".pickle") and file_name.startswith("pose_")
     ]
@@ -28,16 +28,18 @@ def load_dataset():
         print(f"\nExtracting landmarks from new videos: {n} videos detected\n")
 
         for idx in tqdm(range(n)):
-            save_landmarks_from_video(videos_not_in_dataset[idx])
+            save_landmarks_from_test_video(videos_not_in_dataset[idx])
 
     return videos
 
 
-def load_reference_signs(videos):
+
+
+def load_test_reference_signs(videos):
     reference_signs = {"name": [], "sign_model": [], "distance": []}
     for video_name in videos:
         sign_name = video_name.split("-")[0]
-        path = os.path.join("data", "dataset", sign_name, video_name)
+        path = os.path.join("data", "test_dataset", sign_name, video_name)
 
         left_hand_list = load_array(os.path.join(path, f"lh_{video_name}.pickle"))
         right_hand_list = load_array(os.path.join(path, f"rh_{video_name}.pickle"))
